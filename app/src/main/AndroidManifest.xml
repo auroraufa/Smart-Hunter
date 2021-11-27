@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHunter">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
             android:name=".DetailNotifikasi"
             android:exported="true" />
         <activity

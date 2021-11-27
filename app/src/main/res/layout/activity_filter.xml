@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Khusus Seminar"
-        android:textColor="#F44336"
+        android:textColor="#E91E63"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/filter"
