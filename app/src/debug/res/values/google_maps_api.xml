@@ -4,12 +4,12 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=8C:AC:12:6F:D1:16:2B:95:4A:70:B0:EC:3E:7A:C9:6A:61:BB:9B:41%3Bcom.example.ptb_tb
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=8C:AC:12:6F:D1:16:2B:95:4A:70:B0:EC:3E:7A:C9:6A:61:BB:9B:41%3Bcom.example.smarthunter
 
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.example.ptb_tb
+    com.example.smarthunter
 
     SHA-1 certificate fingerprint:
     8C:AC:12:6F:D1:16:2B:95:4A:70:B0:EC:3E:7A:C9:6A:61:BB:9B:41

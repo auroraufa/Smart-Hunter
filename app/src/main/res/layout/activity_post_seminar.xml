@@ -201,6 +201,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#050522"
+                android:onClick="toPost"
                 android:text="Post"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="20dp" />
