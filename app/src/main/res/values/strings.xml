@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Smart Hunter</string>
+
+    <string-array name="dropdown_kategori">
+
+        <item>Kesehatan</item>
+        <item>Pendidikan</item>
+        <item>Teknologi</item>
+        <item>Politik</item>
+        <item>Sosial Budaya</item>
+        <item>Keuangan</item>
+        <item>Kewirausahaan</item>
+        <item>Pengembangan Diri</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="home">Home</string>
+    <string name="post">Post</string>
+    <string name="profile">Profile</string>
+    <string name="activity_home">Activity Home</string>
+    <string name="activity_post">Activity Post</string>
+    <string name="activity_profile">Activity Profile</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    tools:context=".Edit">
+
+    <ImageButton
+        android:id="@+id/add4"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="posting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_circle_24"
+        app:tint="#101010" />
+
+    <ImageButton
+        android:id="@+id/profile3"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="gprofil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        app:tint="#090808" />
+
+    <ImageButton
+        android:id="@+id/home4"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#090909" />
+
+    <TextView
+        android:id="@+id/textupdate"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:text="Update"
+        android:textColor="#0B0909"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textyour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Proflie"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textupdate"
+        app:layout_constraintStart_toStartOf="@+id/textupdate"
+        app:layout_constraintTop_toBottomOf="@+id/textupdate" />
+
+    <ImageView
+        android:id="@+id/foto2"
+        android:layout_width="115dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textyour"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/textyour"
+        app:layout_constraintTop_toBottomOf="@+id/textyour"
+        app:srcCompat="@drawable/foto" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="12dp"
+        android:background="#FDFAFA"
+        android:text=" Name"
+        android:textColor="#0E0D0D"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto2" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="24dp"
+        android:background="#FDF6F6"
+        android:text=" Phone Number"
+        android:textColor="#0E0D0D"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFCFC"
+        android:text=" E-mail"
+        android:textColor="#0E0D0D"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text=" Password"
+        android:textColor="#0E0D0D"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#050522"
+        android:onClick="goupdate"
+        android:text="Update"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputname"
+        android:layout_width="239dp"
+        android:layout_height="46dp"
+        android:hint=" Ginda Teguh Imani"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputphone"
+        android:layout_width="239dp"
+        android:layout_height="46dp"
+        android:hint="+6285288788790"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone"
+        app:layout_constraintEnd_toEndOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="@+id/phone"
+        app:layout_constraintTop_toTopOf="@+id/phone"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputemail"
+        android:layout_width="239dp"
+        android:layout_height="46dp"
+        android:hint="ginda@gmailcom"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toTopOf="@+id/email"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputpassword"
+        android:layout_width="239dp"
+        android:layout_height="46dp"
+        android:drawableEnd="@drawable/ic_eyes"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pass"
+        app:layout_constraintEnd_toEndOf="@+id/pass"
+        app:layout_constraintStart_toStartOf="@+id/pass"
+        app:layout_constraintTop_toTopOf="@+id/pass"
+        app:layout_constraintVertical_bias="0.761"
+        tools:text="ginda" />
+
+    <ImageView
+        android:id="@+id/addphoto"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/foto2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

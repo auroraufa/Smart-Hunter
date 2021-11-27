@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    tools:context=".hasilPencarian">
+
+    <EditText
+        android:id="@+id/searching"
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="52dp"
+        android:background="#FFC369"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:ems="10"
+        android:hint="  Cari"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#FFECAA"
+        android:onClick="filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/searching"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_filter_alt_24"
+        app:tint="#0E0E0E" />
+
+    <ImageButton
+        android:id="@+id/home1"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add1"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#050505" />
+
+    <ImageButton
+        android:id="@+id/add1"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="posting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_circle_24"
+        app:tint="#0C0B0B" />
+
+    <ImageButton
+        android:id="@+id/profile1"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="goprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toEndOf="@+id/add1"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        app:tint="#0C0B0B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

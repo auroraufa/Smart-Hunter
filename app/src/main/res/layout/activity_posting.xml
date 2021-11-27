@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_posting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    android:textAlignment="center"
+    tools:context=".Posting">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="350dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="31dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/title_pilihevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_postyourevent" />
+
+    <ImageButton
+        android:id="@+id/Button_Akun_posting"
+        android:layout_width="152dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/akun" />
+
+    <ImageButton
+        android:id="@+id/Button_Add_posting"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFC369"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tambah" />
+
+    <ImageButton
+        android:id="@+id/Button_home_posting"
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/home"
+        tools:layout_editor_absoluteX="-5dp" />
+
+    <TextView
+        android:id="@+id/title_postyourevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/risque"
+        android:text="Post Your Event"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_pilihevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Pilih Jenis Event"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/title_postyourevent"
+        app:layout_constraintStart_toStartOf="@+id/title_postyourevent"
+        app:layout_constraintTop_toBottomOf="@+id/title_postyourevent" />
+
+    <Button
+        android:id="@+id/post_seminar"
+        android:layout_width="139dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="toPostSeminar"
+        android:text="Seminar"
+        android:textColor="#000000"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_pilihevent"
+        app:strokeColor="#000000"
+        app:strokeWidth="4dp" />
+
+    <ImageButton
+        android:id="@+id/Button_back_posting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/tombol_back"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="139dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="toPostWebinar"
+        android:text="Webinar"
+        android:textColor="#000000"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/post_seminar"
+        app:layout_constraintTop_toBottomOf="@+id/title_pilihevent"
+        app:strokeColor="#000000"
+        app:strokeWidth="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

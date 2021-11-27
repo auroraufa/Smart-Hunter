@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    tools:context=".Filter">
+
+    <TextView
+        android:id="@+id/provinsi"
+        android:layout_width="312dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="80dp"
+        android:background="#FFFEFE"
+        android:text="   Provinsi"
+        android:textColor="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/kabupaten"
+        android:layout_width="312dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="36dp"
+        android:background="#FFFEFE"
+        android:text="   Kabupaten/Kota"
+        android:textColor="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/provinsi" />
+
+    <TextView
+        android:id="@+id/kecamatan"
+        android:layout_width="312dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="36dp"
+        android:background="#FFFEFE"
+        android:text="   Kecamatan"
+        android:textColor="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kabupaten" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="462dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="4dp"
+        android:background="#FFC369"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/filter"
+        android:layout_width="95dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="36dp"
+        android:text="Filter"
+        android:textColor="#0C0C0C"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textkhusus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Khusus Seminar"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/filter"
+        app:layout_constraintTop_toBottomOf="@+id/filter" />
+
+    <TextView
+        android:id="@+id/textlokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Lokasi"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Pilihprov"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:text=" Pilih"
+        app:layout_constraintBottom_toBottomOf="@+id/provinsi"
+        app:layout_constraintEnd_toEndOf="@+id/provinsi"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/provinsi"
+        app:layout_constraintTop_toTopOf="@+id/provinsi"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/pilihkab"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:text=" Pilih"
+        app:layout_constraintBottom_toBottomOf="@+id/kabupaten"
+        app:layout_constraintEnd_toEndOf="@+id/kabupaten"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/kabupaten"
+        app:layout_constraintTop_toTopOf="@+id/kabupaten"
+        app:layout_constraintVertical_bias="0.729" />
+
+    <TextView
+        android:id="@+id/pilihkec"
+        android:layout_width="265dp"
+        android:layout_height="34dp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:text=" Pilih"
+        app:layout_constraintBottom_toBottomOf="@+id/kecamatan"
+        app:layout_constraintEnd_toEndOf="@+id/kecamatan"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/kecamatan"
+        app:layout_constraintTop_toTopOf="@+id/kecamatan"
+        app:layout_constraintVertical_bias="0.729" />
+
+    <ImageButton
+        android:id="@+id/home2"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:tint="#090909" />
+
+    <ImageButton
+        android:id="@+id/add2"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_circle_24"
+        app:tint="#101010" />
+
+    <ImageButton
+        android:id="@+id/profile2"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:background="#FFC369"
+        android:backgroundTint="#FFC369"
+        android:onClick="gprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add2"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        app:tint="#090808" />
+
+    <Button
+        android:id="@+id/buttonok"
+        android:layout_width="316dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#050522"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kecamatan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/button_akun"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginBottom="-5dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:srcCompat="@drawable/akun" />
+
+    <ImageButton
+        android:id="@+id/button_home"
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginBottom="-5dp"
+        android:backgroundTint="#FFC369"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/button_add"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-5dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="posting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seminar_list"
+        app:srcCompat="@drawable/tambah" />
+
+    <ImageButton
+        android:id="@+id/notifikasi"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="7dp"
+        android:backgroundTint="#FFECAA"
+        android:onClick="notifikasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notifikasi" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFC369"
+        android:fontFamily="sans-serif-black"
+        android:text="Finding Your Dream!!!😍"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/Searching"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <ImageView
+        android:id="@+id/backgroundSeminar"
+        android:layout_width="197dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:srcCompat="@drawable/background_seminar" />
+
+    <ImageView
+        android:id="@+id/backgrundWebinar"
+        android:layout_width="197dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/backgroundSeminar"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:srcCompat="@drawable/background_seminar" />
+
+    <TextView
+        android:id="@+id/textViewseminar2"
+        android:layout_width="87dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:text="Seminar"
+        android:textAlignment="center"
+        android:textColor="#1E4CEF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Button_seminar"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/Button_seminar"
+        app:layout_constraintTop_toBottomOf="@+id/Button_seminar" />
+
+    <TextView
+        android:id="@+id/textViewWebinar"
+        android:layout_width="87dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:text="Webinar"
+        android:textAlignment="center"
+        android:textColor="#1E4CEF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/Button_listWebinar"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="@+id/Button_listWebinar"
+        app:layout_constraintTop_toBottomOf="@+id/Button_listWebinar" />
+
+    <ImageButton
+        android:id="@+id/Button_listWebinar"
+        android:layout_width="110dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:onClick="list_webinar"
+        app:layout_constraintEnd_toEndOf="@+id/backgrundWebinar"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/backgrundWebinar"
+        app:layout_constraintTop_toTopOf="@+id/backgrundWebinar"
+        app:srcCompat="@drawable/logo_tombol_webinar" />
+
+    <TextView
+        android:id="@+id/favorite"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFC369"
+        android:fontFamily="sans-serif-black"
+        android:text="Your Favorite ❤"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/backgrundWebinar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backgroundSeminar"
+        app:layout_constraintTop_toBottomOf="@+id/backgrundWebinar" />
+
+    <ImageButton
+        android:id="@+id/Button_seminar"
+        android:layout_width="112dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:onClick="list_seminar"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundSeminar"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/backgroundSeminar"
+        app:layout_constraintTop_toTopOf="@+id/backgroundSeminar"
+        app:srcCompat="@drawable/logo_tombol_seminar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favorite_list"
+        android:layout_width="411dp"
+        android:layout_height="286dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_akun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favorite"
+        tools:listitem="@layout/item_favorite" />
+
+    <EditText
+        android:id="@+id/Searching"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="13dp"
+        android:background="#FFC369"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=" Cari"
+        android:onClick="pencarian"
+        app:layout_constraintEnd_toStartOf="@+id/notifikasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

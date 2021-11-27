@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_seminar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFECAA"
+    tools:context=".List_seminar">
+
+    <ImageButton
+        android:id="@+id/button_akun_seminar"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_add_notifikasi"
+        app:srcCompat="@drawable/akun" />
+
+    <ImageButton
+        android:id="@+id/button_add_notifikasi"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="posting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seminar_list"
+        app:layout_constraintVertical_bias="0.985"
+        app:srcCompat="@drawable/tambah" />
+
+    <ImageButton
+        android:id="@+id/button_home_seminar"
+        android:layout_width="159dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#FFC369"
+        android:onClick="main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_add_notifikasi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/back_seminar"
+        android:layout_width="59dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FFECAA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tombol_back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seminar_list"
+        android:layout_width="384dp"
+        android:layout_height="590dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_akun_seminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlist_seminar"
+        tools:listitem="@layout/item_seminar" />
+
+    <TextView
+        android:id="@+id/textlist_seminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Seminar"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
