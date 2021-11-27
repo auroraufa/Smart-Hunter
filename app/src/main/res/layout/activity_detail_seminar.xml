@@ -240,6 +240,9 @@
                     android:textColor="@color/black"
                     android:textSize="12dp"
                     android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"/>-->
 
                 <TextView
                     android:layout_width="306dp"
