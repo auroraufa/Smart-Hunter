@@ -115,6 +115,11 @@ public class PostSeminar extends AppCompatActivity {
         startActivity(postIntent);
     }
 
+    public void toMaps(View view) {
+        Intent mapsIntent = new Intent(this, MapsPost.class);
+        startActivity(mapsIntent);
+    }
+
 //    public void toMaps(View view) {
 //        Intent mapsIntent = new Intent(this, Maps.class);
 //        startActivity(mapsIntent);
