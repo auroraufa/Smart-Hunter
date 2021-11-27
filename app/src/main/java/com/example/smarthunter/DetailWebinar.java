@@ -2,20 +2,26 @@ package com.example.smarthunter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class DetailWebinar extends AppCompatActivity {
+
+    ImageView back_detailwebinar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_webinar);
-    }
 
-    public void toListWebinar(View view) {
-        Intent listWebinar = new Intent(this,List_webinar.class);
-        startActivity(listWebinar);
+        back_detailwebinar = (ImageView) findViewById(R.id.back_detailwebinar);
+
+        back_detailwebinar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }

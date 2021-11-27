@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/akun" />
 
     <ImageButton
-        android:id="@+id/back_webinar"
+        android:id="@+id/back_detail_webinar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -83,6 +83,6 @@
         app:layout_constraintBottom_toTopOf="@+id/button_home_webinar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_webinar"
+        app:layout_constraintTop_toBottomOf="@+id/back_detail_webinar"
         tools:listitem="@layout/item_webinar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

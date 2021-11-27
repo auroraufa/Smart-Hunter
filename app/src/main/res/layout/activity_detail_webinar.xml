@@ -19,11 +19,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="33dp"
-                android:layout_height="30dp"
+                android:id="@+id/back_detailwebinar"
+                android:layout_width="24dp"
+                android:layout_height="22dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:onClick="toListWebinar"
                 android:src="@drawable/tombol_back" />
 
             <TextView

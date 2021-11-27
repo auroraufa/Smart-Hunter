@@ -26,7 +26,7 @@ public class List_webinar extends AppCompatActivity implements webinarAdapter.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_webinar);
 
-        back_listwebinar = (ImageButton) findViewById(R.id.back_webinar);
+        back_listwebinar = (ImageButton) findViewById(R.id.back_detail_webinar);
 
         back_listwebinar.setOnClickListener(new View.OnClickListener() {
             @Override
