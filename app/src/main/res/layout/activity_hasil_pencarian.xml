@@ -7,6 +7,21 @@
     android:background="#FFECAA"
     tools:context=".hasilPencarian">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pencarian_list"
+        android:layout_width="381dp"
+        android:layout_height="587dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/home1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searching"
+        tools:listitem="@layout/item_pencarian" />
+
     <EditText
         android:id="@+id/searching"
         android:layout_width="300dp"
