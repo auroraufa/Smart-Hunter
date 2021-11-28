@@ -190,7 +190,7 @@
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text=" Cari"
+        android:hint=" Cari"
         android:onClick="pencarian"
         app:layout_constraintEnd_toStartOf="@+id/notifikasi"
         app:layout_constraintStart_toStartOf="parent"
