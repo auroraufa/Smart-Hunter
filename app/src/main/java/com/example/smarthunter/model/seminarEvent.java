@@ -7,6 +7,7 @@ public class seminarEvent {
     public String judul_sem;
     public String event_sem;
     public Integer poster_sem;
+    public Object jenis_pen;
 
     public seminarEvent(String jenis_sem, String kategori_sem, String judul_sem, String event_sem, Integer poster_sem) {
         this.jenis_sem = jenis_sem;

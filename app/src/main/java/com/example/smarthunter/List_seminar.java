@@ -39,7 +39,7 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
         seminar_adapter.setListSeminar(getDataList_seminar());
         seminar_adapter.setListener(this);
 
-        rvseminar_list = findViewById(R.id.seminar_list);
+        rvseminar_list = findViewById(R.id.pencarian_list);
         rvseminar_list.setAdapter(seminar_adapter);
         LinearLayoutManager linearmanajer = new LinearLayoutManager(this);
         rvseminar_list.setLayoutManager(linearmanajer);

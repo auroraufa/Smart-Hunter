@@ -24,11 +24,11 @@ public class seminarAdapter
 
         public seminarViewHolder(@NonNull View itemView) {
             super(itemView);
-            jenis_event_sem = itemView.findViewById(R.id.jenisacara_sem);
-            kategori_acara_sem =  itemView.findViewById(R.id.kategori_acara_sem);
-            judul_acara_sem = itemView.findViewById(R.id.judul_acara_sem);
-            tanggal_event_sem = itemView.findViewById(R.id.tanggal_event_sem);
-            ImagePoster_sem = itemView.findViewById(R.id.image_poster_sem);
+            jenis_event_sem = itemView.findViewById(R.id.jenis_event_pen);
+            kategori_acara_sem =  itemView.findViewById(R.id.kategori_acara_pen);
+            judul_acara_sem = itemView.findViewById(R.id.judul_acara_pen);
+            tanggal_event_sem = itemView.findViewById(R.id.tanggal_event_pen);
+            ImagePoster_sem = itemView.findViewById(R.id.ImagePoster_pen);
             itemView.setOnClickListener(this);
         }
 
