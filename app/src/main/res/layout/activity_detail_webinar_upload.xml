@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCFFDE69"
+    android:scrollbars="vertical"
+    tools:context=".DetailWebinarUp">
+
+    <ScrollView
+        android:id="@+id/detail_webinar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:onClick="toListWebinar"
+                android:src="@drawable/tombol_back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Detail Event"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_poster_sem"
+                android:layout_width="wrap_content"
+                android:layout_height="249dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="14dp"
+                app:srcCompat="@drawable/poster_png" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:background="#5CC2AD"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Webinar"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/image_saved"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/jenis_sv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:background="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Finansial"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Tantangan dan Peluang Perpajakan di Era Revolusi Industri 4.0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="101dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/cal"
+                    android:layout_width="35dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/pngfind_com_plus_icon_png_2257477"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Tanggal dan Waktu"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Tanggal : 23 Januari 2020 Waktu : 08.00 - 12.00 WIB Deadline : 22 Januari 2020 "
+                    android:textColor="#197A83"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Ticket"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="43dp"
+                    android:text="FREE!"
+                    android:textColor="#1E4CEF"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Pihak Penyelenggara"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Universitas Gunadarma
+                    taxcenter.gunadarma.ac.id"
+                    android:textColor="#197A83"
+                    android:textSize="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="309dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Deskripsi"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="306dp"
+                    android:layout_height="267dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Dalam rangka memperingati Hari Ulang Tahun, Tax Center Universitas Gunadarma menyelenggarakan Gunadarma Tax Festival. Bertajuk “Peran Tax Center dalam Upaya Membangun Kesadaran Pajak pada Era Reformasi Perpajakan”, kegiatan ini merupakan kerja sama Universitas Gunadarma dengan DDTC Consulting dan Direktorat Jendral Pajak Kantor Wilayah Jawa Barat III.
+\n\n Gunadarma Tax Festival dilaksanakan pada Kamis, 23 Januari 2020 di Kampus D dan F8 Universitas Gunadarma, Depok. Dimulai pukul 08.00 WIB dan berakhir pada pukul 12.00 WIB acara ini meliputi Seminar Nasional Pajak, MoU dengan DDTC, pengukuhan Relawan Pajak, Penghargaan Dosen Inklusi Pajak, serta lomba Poster dan Video Pajak.
+\n\n Tujuh Perguruan Tinggi yang mengikuti acara pengukuhan Relawan Pajak adalah:
+\n• UI Vokasi,
+\n• IPB Vokasi,
+\n• STIAMI Bekasi,
+\n• Universitas Bhayangkara,
+\n• IAI Tazkia,
+\n• IBI Kesatuan, dan
+\n• Universitas Gunadarma
+"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Persyaratan"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="- Kuota terbatas
+\n- pelajar
+\n- mahasiswa
+\n- masyarakat umum
+"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Benefit"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="306dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="- E-sertifikat
+\n- Ilmu yang bermanfaat
+\n- Menambah Relasi
+"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/pngwing_com_9"
+                    app:tint="@color/black" />
+
+
+                <Button
+                    android:id="@+id/daftarWebinar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:backgroundTint="#050522"
+                    android:text="Edit" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
