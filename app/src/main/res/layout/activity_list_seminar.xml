@@ -65,7 +65,7 @@
         app:srcCompat="@drawable/tombol_back" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pencarian_list"
+        android:id="@+id/seminar_list"
         android:layout_width="384dp"
         android:layout_height="590dp"
         android:layout_marginStart="10dp"

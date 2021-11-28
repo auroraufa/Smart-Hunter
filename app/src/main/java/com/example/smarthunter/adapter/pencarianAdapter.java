@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class pencarianAdapter
         extends RecyclerView.Adapter<pencarianAdapter.pencarianViewHolder>{
-    private pencarianViewHolder viewHolder;
 
     public class pencarianViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -67,7 +66,7 @@ public class pencarianAdapter
     }
 
     @Override
-    public void onBindViewHolder(@NonNull pencarianViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull pencarianViewHolder viewHolder, int position) {
         pencarianEvent pen = listpencarian.get(position);
         viewHolder.jenis_event_pen.setText(pen.jenis_pen);
         viewHolder.judul_acara_pen.setText(pen.judul_pen);
