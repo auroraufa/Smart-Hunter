@@ -85,56 +85,44 @@
         android:id="@+id/name"
         android:layout_width="310dp"
         android:layout_height="76dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:background="#FDFAFA"
         android:text=" Name"
         android:textColor="#0E0D0D"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foto2" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="310dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="24dp"
-        android:background="#FDF6F6"
-        android:text=" Phone Number"
-        android:textColor="#0E0D0D"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="310dp"
         android:layout_height="76dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="#FFFCFC"
         android:text=" E-mail"
         android:textColor="#0E0D0D"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/pass"
         android:layout_width="310dp"
         android:layout_height="76dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="#FFFFFF"
         android:text=" Password"
         android:textColor="#0E0D0D"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -142,13 +130,13 @@
         android:id="@+id/update"
         android:layout_width="312dp"
         android:layout_height="52dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#050522"
         android:onClick="goupdate"
         android:text="Update"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass" />
 
@@ -163,18 +151,6 @@
         app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toTopOf="@+id/name"
         app:layout_constraintVertical_bias="0.761" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputphone"
-        android:layout_width="239dp"
-        android:layout_height="46dp"
-        android:hint="+6285288788790"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="@+id/phone"
-        app:layout_constraintStart_toStartOf="@+id/phone"
-        app:layout_constraintTop_toTopOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.69" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputemail"
