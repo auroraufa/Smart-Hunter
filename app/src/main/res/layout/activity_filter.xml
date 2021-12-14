@@ -121,6 +121,9 @@
         app:srcCompat="@drawable/ic_baseline_add_circle_24"
         app:tint="#101010" />
 
+
+
+
     <ImageButton
         android:id="@+id/profile2"
         android:layout_width="150dp"
@@ -133,6 +136,17 @@
         app:layout_constraintStart_toEndOf="@+id/add2"
         app:srcCompat="@drawable/ic_baseline_account_circle_24"
         app:tint="#090808" />
+
+
+
+
+
+
+
+
+
+
+
 
     <Button
         android:id="@+id/buttonok"
