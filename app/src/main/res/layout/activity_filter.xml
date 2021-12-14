@@ -8,45 +8,6 @@
     tools:context=".Filter">
 
     <TextView
-        android:id="@+id/provinsi"
-        android:layout_width="312dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="80dp"
-        android:background="#FFFEFE"
-        android:text="   Provinsi"
-        android:textColor="#070707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/kabupaten"
-        android:layout_width="312dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="36dp"
-        android:background="#FFFEFE"
-        android:text="   Kabupaten/Kota"
-        android:textColor="#070707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/provinsi" />
-
-    <TextView
-        android:id="@+id/kecamatan"
-        android:layout_width="312dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="36dp"
-        android:background="#FFFEFE"
-        android:text="   Kecamatan"
-        android:textColor="#070707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kabupaten" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="462dp"
         android:layout_height="141dp"
@@ -75,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Khusus Seminar"
-        android:textColor="#E91E63"
+        android:text="Finding Your Dream!!!"
+        android:textColor="#F8060D"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/filter"
@@ -86,9 +47,9 @@
         android:id="@+id/textlokasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
-        android:text="Lokasi"
+        android:text="Jenis Event"
         android:textColor="#090909"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -96,43 +57,42 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
+        android:id="@+id/textlokasi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Kategori Event"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pilihprov" />
+
+    <TextView
         android:id="@+id/Pilihprov"
-        android:layout_width="265dp"
-        android:layout_height="34dp"
+        android:layout_width="321dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="#F8F8F8"
         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
         android:text=" Pilih"
-        app:layout_constraintBottom_toBottomOf="@+id/provinsi"
-        app:layout_constraintEnd_toEndOf="@+id/provinsi"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/provinsi"
-        app:layout_constraintTop_toTopOf="@+id/provinsi"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlokasi" />
 
     <TextView
         android:id="@+id/pilihkab"
-        android:layout_width="265dp"
-        android:layout_height="34dp"
+        android:layout_width="321dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
         android:text=" Pilih"
-        app:layout_constraintBottom_toBottomOf="@+id/kabupaten"
-        app:layout_constraintEnd_toEndOf="@+id/kabupaten"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/kabupaten"
-        app:layout_constraintTop_toTopOf="@+id/kabupaten"
-        app:layout_constraintVertical_bias="0.729" />
-
-    <TextView
-        android:id="@+id/pilihkec"
-        android:layout_width="265dp"
-        android:layout_height="34dp"
-        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
-        android:text=" Pilih"
-        app:layout_constraintBottom_toBottomOf="@+id/kecamatan"
-        app:layout_constraintEnd_toEndOf="@+id/kecamatan"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/kecamatan"
-        app:layout_constraintTop_toTopOf="@+id/kecamatan"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlokasi2" />
 
     <ImageButton
         android:id="@+id/home2"
@@ -178,13 +138,13 @@
         android:id="@+id/buttonok"
         android:layout_width="316dp"
         android:layout_height="52dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#050522"
         android:onClick="checkok"
         android:text="OK"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kecamatan" />
+        app:layout_constraintTop_toBottomOf="@+id/pilihkab" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
