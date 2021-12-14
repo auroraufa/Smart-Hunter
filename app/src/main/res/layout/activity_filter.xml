@@ -180,6 +180,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#050522"
+        android:onClick="checkok"
         android:text="OK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

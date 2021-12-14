@@ -28,4 +28,9 @@ public class Filter extends AppCompatActivity {
         Intent profile= new Intent(this, Account.class);
         startActivity(profile);
     }
+
+    public void checkok(View view) {
+        Intent mainIntent = new Intent(this, hasilPencarian.class);
+        startActivity(mainIntent);
+    }
 }

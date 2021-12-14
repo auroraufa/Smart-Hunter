@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
@@ -21,11 +23,21 @@ public class PostSeminar extends AppCompatActivity {
     DatePickerDialog.OnDateSetListener date;
     DatePickerDialog.OnDateSetListener date1;
     EditText tgl_pelaksanaan,tgl_dl, waktu;
+    ImageView back_postseminar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_seminar);
+
+        back_postseminar = (ImageView) findViewById(R.id.back_postseminar);
+
+        back_postseminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         tgl_pelaksanaan = (EditText) findViewById(R.id.tgl_pelaksanaan);
         tgl_dl = (EditText) findViewById(R.id.tgl_dl);
@@ -108,11 +120,6 @@ public class PostSeminar extends AppCompatActivity {
         String myFormat = "yyyy-MM-dd";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         tgl_dl.setText(sdf.format(myCalendar.getTime()));
-    }
-
-    public void toPost(View view) {
-        Intent postIntent = new Intent(this, Posting.class);
-        startActivity(postIntent);
     }
 
     public void toMaps(View view) {
