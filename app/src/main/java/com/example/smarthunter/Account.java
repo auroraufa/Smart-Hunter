@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,6 +29,14 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
+        SharedPreferences preferences = getApplicationContext()
+                .getSharedPreferences(
+                        "com.example.smarthunter.PREFRENCES",
+                        Context.MODE_PRIVATE
+                );
+
+        String token = preferences.getString("ACCESS_TOKEN", null);
 
         event_adapt = new eventAdapter();
         event_adapt.setListEvent(getDataEvent());
