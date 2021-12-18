@@ -181,15 +181,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/saved_list"
-        android:layout_width="415dp"
-        android:layout_height="208dp"
+        android:layout_width="414dp"
+        android:layout_height="203dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/add3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mysaved"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.4"
         tools:listitem="@layout/item_event" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

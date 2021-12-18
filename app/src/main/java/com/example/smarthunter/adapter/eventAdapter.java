@@ -19,7 +19,7 @@ public class eventAdapter
 
     public class eventViewHolder extends RecyclerView.ViewHolder{
 
-        TextView myevent_nama,myevent_jenis,myevent_detail;
+        TextView myevent_nama,myevent_jenis,myevent_detail,myevent_judul,myevent_tanggal;
         ImageView myevent_poster;
 
         public eventViewHolder(@NonNull View itemView) {
@@ -27,6 +27,8 @@ public class eventAdapter
             myevent_nama = itemView.findViewById(R.id.nama_sv);
             myevent_jenis =  itemView.findViewById(R.id.jenis_sv);
             myevent_detail = itemView.findViewById(R.id.detail_sv);
+            myevent_judul = itemView.findViewById(R.id.judul_sv);
+            myevent_tanggal = itemView.findViewById(R.id.tanggal_sv);
             myevent_poster = itemView.findViewById(R.id.image_saved);
         }
     }
@@ -51,7 +53,9 @@ public class eventAdapter
         viewHolder.myevent_nama.setText(myev.nama_event);
         viewHolder.myevent_jenis.setText(myev.jenis_event);
         viewHolder.myevent_detail.setText(myev.detail_event);
-        viewHolder.myevent_poster.setImageResource(myev.image_poster.intValue());
+        viewHolder.myevent_detail.setText(myev.judul_event);
+        viewHolder.myevent_tanggal.setText(myev.tanggal_event);
+        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
 
     }
 

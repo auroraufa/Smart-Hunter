@@ -4,15 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
     android:background="@color/white"
     app:cardCornerRadius="25dp"
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="68dp">
+        android:layout_width="287dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tanggal_sv"
+            android:layout_width="151dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            android:text="Event : 23 Januari 2020"
+            android:textColor="#969191"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_saved"
+            app:layout_constraintTop_toBottomOf="@+id/judul_sv"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/judul_sv"
+            android:layout_width="158dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+            android:text="Pendidikan Di Zaman Sekarang"
+            android:textColor="#1E4CEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toEndOf="@+id/image_saved"
+            app:layout_constraintTop_toBottomOf="@+id/nama_sv" />
 
         <TextView
             android:id="@+id/jenis_sv"
@@ -28,17 +52,17 @@
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toEndOf="@+id/nama_sv"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.148" />
+            app:layout_constraintVertical_bias="0.16" />
 
         <TextView
             android:id="@+id/nama_sv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
             android:background="#5CC2AD"
             android:fontFamily="sans-serif-black"
             android:text="Seminar"
@@ -51,26 +75,28 @@
             android:id="@+id/detail_sv"
             android:layout_width="39dp"
             android:layout_height="16dp"
+            android:layout_marginEnd="40dp"
             android:background="#FFEB3B"
             android:fontFamily="sans-serif-black"
             android:text="   Detail"
             android:textColor="@color/black"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/nama_sv"
-            app:layout_constraintStart_toStartOf="@+id/nama_sv"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.826" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tanggal_sv"
+            app:layout_constraintTop_toBottomOf="@+id/judul_sv"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/image_saved"
-            android:layout_width="41dp"
-            android:layout_height="50dp"
+            android:layout_width="56dp"
+            android:layout_height="70dp"
             android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.428"
             app:srcCompat="@drawable/sem1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>
