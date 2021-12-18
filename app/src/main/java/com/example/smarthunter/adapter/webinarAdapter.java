@@ -54,6 +54,7 @@ public class webinarAdapter
 
     public void setListWebinar(ArrayList<webinarEvent> listWebinar) {
         this.listWebinar = listWebinar;
+        notifyDataSetChanged();
     }
 
     @NonNull

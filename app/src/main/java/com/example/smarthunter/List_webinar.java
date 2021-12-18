@@ -5,14 +5,26 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.smarthunter.adapter.webinarAdapter;
+import com.example.smarthunter.model.EventItem;
+import com.example.smarthunter.model.EventJenisList;
+import com.example.smarthunter.model.seminarEvent;
 import com.example.smarthunter.model.webinarEvent;
+import com.example.smarthunter.retrofit.RetrofitClient;
+import com.example.smarthunter.retrofit.eventClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class List_webinar extends AppCompatActivity implements webinarAdapter.OnWebinarViewHolderClick{
 
@@ -36,7 +48,41 @@ public class List_webinar extends AppCompatActivity implements webinarAdapter.On
         });
 
         webinar_adapter = new webinarAdapter();
-        webinar_adapter.setListWebinar(getDataList_webinar());
+
+        SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
+        String token = preferences.getString("TOKEN","");
+
+        eventClient eventClient = RetrofitClient.getEventClient();
+        Call<EventJenisList> call = eventClient.getEventJenis(token, 2);
+        call.enqueue(new Callback<EventJenisList>() {
+            @Override
+            public void onResponse(Call<EventJenisList> call, Response<EventJenisList> response) {
+                EventJenisList jenisList = response.body();
+                ArrayList<webinarEvent> list = new ArrayList<>();
+                if (jenisList != null) {
+                    List<EventItem> eventItems = jenisList.getEvent();
+                    for (EventItem item:eventItems) {
+                        webinarEvent webEvent = new webinarEvent("Webinar",
+                                item.getNama(),
+                                item.getNamaEvent(),
+                                "Event : " + item.getDate(),
+                                R.drawable. webinar1);
+                        list.add(webEvent);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
+                }
+                webinar_adapter.setListWebinar(list);
+            }
+
+            @Override
+            public void onFailure(Call<EventJenisList> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Gagal ke server", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+//        webinar_adapter.setListWebinar(getDataList_webinar());
         webinar_adapter.setListener(this);
 
         rvwebinar_list = findViewById(R.id.webinar_list);

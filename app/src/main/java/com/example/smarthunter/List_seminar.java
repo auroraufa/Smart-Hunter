@@ -4,15 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.smarthunter.adapter.seminarAdapter;
+import com.example.smarthunter.model.EventItem;
+import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.seminarEvent;
+import com.example.smarthunter.retrofit.RetrofitClient;
+import com.example.smarthunter.retrofit.eventClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class List_seminar extends AppCompatActivity implements seminarAdapter.OnSeminarViewHolderClick{
 
@@ -36,7 +48,41 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
         });
 
         seminar_adapter = new seminarAdapter();
-        seminar_adapter.setListSeminar(getDataList_seminar());
+
+        SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
+        String token = preferences.getString("TOKEN","");
+
+        eventClient eventClient = RetrofitClient.getEventClient();
+        Call<EventJenisList> call = eventClient.getEventJenis(token, 1);
+        call.enqueue(new Callback<EventJenisList>() {
+            @Override
+            public void onResponse(Call<EventJenisList> call, Response<EventJenisList> response) {
+                EventJenisList jenisList = response.body();
+                ArrayList<seminarEvent> list = new ArrayList<>();
+                if (jenisList != null) {
+                    List<EventItem> eventItems = jenisList.getEvent();
+                    for (EventItem item:eventItems) {
+                        seminarEvent semEvent = new seminarEvent("Seminar",
+                                item.getNama(),
+                                item.getNamaEvent(),
+                                "Event : " + item.getDate(),
+                                R.drawable.poster_png );
+                        list.add(semEvent);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
+                }
+                seminar_adapter.setListSeminar(list);
+            }
+
+            @Override
+            public void onFailure(Call<EventJenisList> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Gagal ke server", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         seminar_adapter.setListener(this);
 
         rvseminar_list = findViewById(R.id.seminar_list);
