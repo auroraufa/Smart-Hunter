@@ -9,7 +9,6 @@ import retrofit2.http.POST;
 
 public interface eventClient {
 
-    @FormUrlEncoded
     @POST("login")
     Call<DataLogin> checkLogin(@Field("username") String username, @Field("password") String password);
 }
