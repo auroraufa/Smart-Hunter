@@ -97,7 +97,7 @@
                 android:hint="Waktu Pelaksanaan" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/penyelenggara"
+                android:id="@+id/pihakPenyelenggara"
                 android:layout_width="356dp"
                 android:layout_height="51dp"
                 android:layout_gravity="center_horizontal"
