@@ -56,41 +56,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textlokasi2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
-        android:text="Kategori Event"
-        android:textColor="#090909"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pilihprov" />
+    <!--        app:layout_constraintTop_toBottomOf="@+id/Pilihprov" />-->
 
-    <TextView
-        android:id="@+id/Pilihprov"
-        android:layout_width="321dp"
-        android:layout_height="52dp"
+    <!--    <TextView-->
+<!--        android:id="@+id/pilihkab"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:background="#FFFFFF"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.511"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textlokasi2" />-->
+
+    <Spinner
+        android:id="@+id/Jenis"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#F8F8F8"
-        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
-        android:text=" Pilih"
+        android:autofillHints="Kategori Event"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFFFFF"
+        android:entries="@array/dropdown_Jenis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textlokasi" />
 
     <TextView
-        android:id="@+id/pilihkab"
-        android:layout_width="321dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="24dp"
-        android:background="#FFFFFF"
-        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
-        android:text=" Pilih"
+        android:id="@+id/textlokasi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:text="Kategori Event"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Jenis" />
+
+    <Spinner
+        android:id="@+id/kategori"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:autofillHints="Kategori Event"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFFFFF"
+        android:entries="@array/dropdown_kategori"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textlokasi2" />
 
@@ -138,27 +154,19 @@
         app:tint="#090808" />
 
 
-
-
-
-
-
-
-
-
-
-
     <Button
         android:id="@+id/buttonok"
-        android:layout_width="316dp"
+        android:layout_width="329dp"
         android:layout_height="52dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#050522"
         android:onClick="checkok"
         android:text="OK"
+        app:layout_constraintBottom_toTopOf="@+id/add2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pilihkab" />
+        app:layout_constraintTop_toBottomOf="@+id/kategori"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
