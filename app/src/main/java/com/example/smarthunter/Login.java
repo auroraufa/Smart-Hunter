@@ -56,14 +56,9 @@ public class Login extends AppCompatActivity {
                 if (datalogin != null) {
                     String token = datalogin.getToken();
 
-                    SharedPreferences preferences = getApplicationContext()
-                            .getSharedPreferences(
-                                    "com.example.smarthunter.PREFRENCES",
-                                    Context.MODE_PRIVATE
-                            );
-
+                    SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("ACCESS_TOKEN", token);
+                    editor.putString("TOKEN",token);
                     editor.apply();
 
                     Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);

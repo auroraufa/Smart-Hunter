@@ -1,14 +1,22 @@
 package com.example.smarthunter.retrofit;
 
 import com.example.smarthunter.model.DataLogin;
+import com.example.smarthunter.model.EventJenisList;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface eventClient {
 
+    @FormUrlEncoded
     @POST("login")
     Call<DataLogin> checkLogin(@Field("username") String username, @Field("password") String password);
+
+    @GET("api/seminar/{jenis}")
+    Call<EventJenisList> getEventJenis(@Header("token") String token, @Path("jenis") Integer jenis);
 }

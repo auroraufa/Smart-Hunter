@@ -1,7 +1,6 @@
 package com.example.smarthunter.retrofit;
 
 import androidx.annotation.NonNull;
-
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

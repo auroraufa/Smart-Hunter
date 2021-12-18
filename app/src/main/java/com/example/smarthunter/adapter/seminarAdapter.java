@@ -54,6 +54,7 @@ public class seminarAdapter
 
         public void setListSeminar(ArrayList<seminarEvent> listSeminar) {
             this.listSeminar = listSeminar;
+            notifyDataSetChanged();
     }
 
     @NonNull
@@ -72,7 +73,7 @@ public class seminarAdapter
         viewHolder.judul_acara_sem.setText(sem.judul_sem);
         viewHolder.tanggal_event_sem.setText(sem.event_sem);
         viewHolder.kategori_acara_sem.setText(sem.kategori_sem);
-        viewHolder.ImagePoster_sem.setImageResource(sem.poster_sem.intValue());
+//        viewHolder.ImagePoster_sem.setImageResource(sem.poster_sem.intValue());
     }
 
     @Override
