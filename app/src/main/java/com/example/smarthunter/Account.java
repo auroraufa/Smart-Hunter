@@ -57,21 +57,21 @@ public class Account extends AppCompatActivity {
 
     public ArrayList<saved> getDataSaved() {
         ArrayList<saved> list = new ArrayList<>();
-        list.add(new saved("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","30 November 2021",R.drawable.sem1));
-        list.add(new saved("Seminar", "Pendidikan", "Detail","Pentingnya Teknologi Di Era 4.0","2 November 2021",R.drawable.sem2));
-        list.add(new saved("Seminar", "Kesehatan", "Detail","Menjaga Kesehatan Dengan Berolahraga","3 Desember 2021",R.drawable.sem3));
-        list.add(new saved("Seminar", "Technopreneur", "Detail","Berbisnis Dengan Modal Kecil","5 Desember 2021",R.drawable.web1));
-        list.add(new saved("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","5 Desember 2021",R.drawable.sem4));
+        list.add(new saved("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","Event : 30-12-2021",R.drawable.sem1));
+        list.add(new saved("Seminar", "Pendidikan", "Detail","Pentingnya Teknologi Di Era 4.0","Event : 2-10-2021",R.drawable.sem2));
+        list.add(new saved("Seminar", "Kesehatan", "Detail","Menjaga Kesehatan Dengan Berolahraga","Event : 3-2-2021",R.drawable.sem3));
+        list.add(new saved("Seminar", "Technopreneur", "Detail","Berbisnis Dengan Modal Kecil","Event : 10-10-2021",R.drawable.web1));
+        list.add(new saved("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","Event : 10-8-2021",R.drawable.sem4));
         return list;
     }
 
     public ArrayList<event> getDataEvent() {
         ArrayList<event> list = new ArrayList<>();
-        list.add(new event("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","7 November 2021", R.drawable.sem1));
-        list.add(new event("seminar", "Teknologi", "Detail","Pentingnya Teknologi Di Zaman Sekarang","10 Desember 2021", R.drawable.sem2));
-        list.add(new event("Webinar", "Pendidikan", "Detail","Sosialisasi Jaringan Komputer", "1 Oktober 2021", R.drawable.sem3));
-        list.add(new event("Webinar", "Pendidikan", "Detail","Menjaga Kesehatan Mata","2 November 2021", R.drawable.web1));
-        list.add(new event("Webinar", "Technopreneur", "Detail","Kembangkan Bisnis Dari Sekarang","3 Oktober 2021", R.drawable.sem4));
+        list.add(new event("Seminar", "Pendidikan", "Detail","Pendidikan Di Zaman Sekarang","Event : 7-10-2021", R.drawable.sem1));
+        list.add(new event("seminar", "Teknologi", "Detail","Pentingnya Teknologi Di Zaman Sekarang","Event : 8-10-2021", R.drawable.sem2));
+        list.add(new event("Webinar", "Pendidikan", "Detail","Sosialisasi Jaringan Komputer", "Event : 10-10-2021", R.drawable.sem3));
+        list.add(new event("Webinar", "Pendidikan", "Detail","Menjaga Kesehatan Mata","Event : 1-10-2021", R.drawable.web1));
+        list.add(new event("Webinar", "Technopreneur", "Detail","Kembangkan Bisnis Dari Sekarang","Event : 10-12-2021", R.drawable.sem4));
 
         return list;
     }
