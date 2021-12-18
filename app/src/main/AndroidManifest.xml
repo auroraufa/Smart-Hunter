@@ -38,9 +38,6 @@
             android:exported="false"
             android:label="@string/title_activity_maps_post" />
         <activity
-            android:name=".DetailNotifikasi"
-            android:exported="true" />
-        <activity
             android:name=".DetailWebinar"
             android:exported="true" />
         <activity

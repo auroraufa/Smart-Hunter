@@ -25,8 +25,8 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/font/risque.xml" value="0.284375" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_account.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_notifikasi.xml" value="0.1" />
-        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_seminar.xml" value="0.16052631578947368" />
-        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_webinar.xml" value="0.16052631578947368" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_seminar.xml" value="0.176" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_webinar.xml" value="0.264" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_edit.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_favorite.xml" value="0.25271739130434784" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_filter.xml" value="0.16052631578947368" />
@@ -36,6 +36,7 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_main.xml" value="0.2463768115942029" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_maps.xml" value="0.24864130434782608" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_maps_post.xml" value="0.16052631578947368" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_notifikasi.xml" value="0.25271739130434784" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_post_seminar.xml" value="0.24864130434782608" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_post_webinar.xml" value="0.24864130434782608" />
@@ -64,31 +65,38 @@
         <entry key="..\:/SmartHunter/app/src/main/res/menu/buttomnavigation_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/SmartHunter/app/src/main/res/menu/buttonnavigation_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/SmartHunter/app/src/main/res/menu/state_bnve.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_account.xml" value="0.22" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_account.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_notifikasi.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_seminar.xml" value="0.17083333333333334" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_seminar_upload.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_webinar.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_webinar_upload.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_edit.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_editseminar.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_favorite.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_filter.xml" value="0.17083333333333334" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_hasil_pencarian.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_list_seminar.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_list_webinar.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_login.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_webinar.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_favorite.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_maps.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_maps_post.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_notifikasi.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_post_seminar.xml" value="0.17083333333333334" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_post_webinar.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_posting.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_register.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_favorite.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_saved.xml" value="0.1" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_account.xml" value="0.25" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_seminar.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_seminar_upload.xml" value="0.25" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_webinar.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_detail_webinar_upload.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_edit.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_editseminar.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_editwebinar.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_filter.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_hasil_pencarian.xml" value="0.2" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_list_seminar.xml" value="0.22" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_list_webinar.xml" value="0.25" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_main2.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_maps_post.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_notifikasi.xml" value="0.25" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_event.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_favorite.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_pencarian.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_seminar.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Lisca Angriani/AndroidStudioProjects/Smart-Hunter/app/src/main/res/layout/item_webinar.xml" value="0.12771739130434784" />
       </map>
     </option>
   </component>

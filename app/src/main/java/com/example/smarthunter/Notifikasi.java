@@ -73,10 +73,8 @@ public class Notifikasi extends AppCompatActivity implements NotifikasiAdapter.O
         startActivity(account);
     }
 
-
     @Override
     public void onClick() {
-        Intent detailnotifikasi = new Intent(this,DetailNotifikasi.class);
-        startActivity(detailnotifikasi);
+
     }
 }

@@ -18,11 +18,11 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/back_postseminar"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:onClick="toPost"
                 android:src="@drawable/tombol_back" />
 
             <TextView
@@ -95,6 +95,15 @@
                 android:background="@drawable/border"
                 android:drawableEnd="@drawable/ic_baseline_access_time_24"
                 android:hint="Waktu Pelaksanaan" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/penyelenggara"
+                android:layout_width="356dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:hint="Pihak Penyelenggara" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText7"

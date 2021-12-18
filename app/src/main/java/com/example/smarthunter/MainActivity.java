@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
@@ -14,6 +16,8 @@ import android.content.Intent;
 
 import com.example.smarthunter.adapter.favoriteAdapter;
 import com.example.smarthunter.model.favoriteEvent;
+import com.example.smarthunter.retrofit.RetrofitClient;
+import com.example.smarthunter.retrofit.eventClient;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -35,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         rvfavorite_list.setAdapter(favorite_adapter);
         GridLayoutManager gridmanajer = new GridLayoutManager(this, 2,GridLayoutManager.HORIZONTAL, false);
         rvfavorite_list.setLayoutManager(gridmanajer);
+
+        SharedPreferences preferences = getApplicationContext()
+                .getSharedPreferences(
+                        "com.example.smarthunter.PREFRENCES",
+                        Context.MODE_PRIVATE
+                );
+
+        String token = preferences.getString("ACCESS_TOKEN", null);
     }
 
     public ArrayList<favoriteEvent> getDataMainActivity() {
