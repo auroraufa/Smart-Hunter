@@ -148,7 +148,7 @@
         android:layout_height="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:onClick="logout"
+        android:onClick="toLogout"
         app:layout_constraintBottom_toBottomOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="@+id/logout"
         app:layout_constraintTop_toTopOf="parent"

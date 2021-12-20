@@ -55,9 +55,11 @@ public class Login extends AppCompatActivity {
                 DataLogin datalogin = response.body();
                 if (datalogin != null) {
                     String token = datalogin.getToken();
+                    Integer userId = datalogin.getId();
 
                     SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
+                    editor.putInt("USERID",userId);
                     editor.putString("TOKEN",token);
                     editor.apply();
 

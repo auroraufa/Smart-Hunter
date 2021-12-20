@@ -13,8 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.example.smarthunter.adapter.favoriteAdapter;
+import com.example.smarthunter.model.DataFavorite;
+import com.example.smarthunter.model.EventJenisList;
+import com.example.smarthunter.model.FavoriteItem;
 import com.example.smarthunter.model.favoriteEvent;
 import com.example.smarthunter.retrofit.RetrofitClient;
 import com.example.smarthunter.retrofit.eventClient;
@@ -22,6 +26,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.http.Path;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView rvfavorite_list;
@@ -33,12 +43,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         favorite_adapter = new favoriteAdapter();
-        favorite_adapter.setListFavorite(getDataMainActivity());
-
-        rvfavorite_list = findViewById(R.id.favorite_list);
-        rvfavorite_list.setAdapter(favorite_adapter);
-        GridLayoutManager gridmanajer = new GridLayoutManager(this, 2,GridLayoutManager.HORIZONTAL, false);
-        rvfavorite_list.setLayoutManager(gridmanajer);
 
         SharedPreferences preferences = getApplicationContext()
                 .getSharedPreferences(
@@ -46,7 +50,49 @@ public class MainActivity extends AppCompatActivity {
                         Context.MODE_PRIVATE
                 );
 
-        String token = preferences.getString("ACCESS_TOKEN", null);
+        String token = preferences.getString("TOKEN", null);
+        Integer userId = preferences.getInt("USERID",0);
+
+        eventClient eventClient = RetrofitClient.getEventClient();
+        Call<DataFavorite> call = eventClient.getDataFav(token, userId);
+        call.enqueue(new Callback<DataFavorite>() {
+            @Override
+            public void onResponse(Call<DataFavorite> call, Response<DataFavorite> response) {
+                DataFavorite dataFavorite = response.body();
+                ArrayList<favoriteEvent> list = new ArrayList<>();
+                if(dataFavorite != null) {
+                    Toast.makeText(getApplicationContext(), "Test Recycler", Toast.LENGTH_SHORT).show();
+                    List<FavoriteItem> favoriteItems = dataFavorite.getFavorite();
+                    for(FavoriteItem item:favoriteItems) {
+                        favoriteEvent favEvent = new favoriteEvent(String.valueOf(item.getJenis()),
+                                item.getNama(),
+                                item.getNamaEvent(),
+                                "Event : " +item.getDate(),
+                                R.drawable.poster_png);
+                        list.add(favEvent);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
+                }
+                favorite_adapter.setListFavorite(list);
+            }
+
+            @Override
+            public void onFailure(Call<DataFavorite> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Gagal ke server", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+//        favorite_adapter.setListFavorite(getDataMainActivity());
+
+        rvfavorite_list = findViewById(R.id.favorite_list);
+        rvfavorite_list.setAdapter(favorite_adapter);
+        GridLayoutManager gridmanajer = new GridLayoutManager(this, 2,GridLayoutManager.HORIZONTAL, false);
+        rvfavorite_list.setLayoutManager(gridmanajer);
+
+
     }
 
     public ArrayList<favoriteEvent> getDataMainActivity() {

@@ -1,7 +1,9 @@
 package com.example.smarthunter.retrofit;
 
+import com.example.smarthunter.model.DataFavorite;
 import com.example.smarthunter.model.DataLogin;
 import com.example.smarthunter.model.EventJenisList;
+import com.example.smarthunter.model.MessageLogOut;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -19,4 +21,12 @@ public interface eventClient {
 
     @GET("api/seminar/{jenis}")
     Call<EventJenisList> getEventJenis(@Header("token") String token, @Path("jenis") Integer jenis);
+
+    @GET("api/favorite/{id}")
+    Call<DataFavorite> getDataFav(@Header("token") String token, @Path("id") Integer id);
+
+    @GET("logout")
+    Call<MessageLogOut> getOut(@Header("token") String token, @Header("message") String message);
+
+
 }

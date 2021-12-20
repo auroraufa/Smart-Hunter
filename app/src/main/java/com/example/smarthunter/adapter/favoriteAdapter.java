@@ -36,11 +36,12 @@ public class favoriteAdapter
 
     public void setListFavorite(ArrayList<favoriteEvent> listFavorite) {
         this.listFavorite = listFavorite;
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public favoriteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public favoriteAdapter.favoriteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.item_favorite, parent, false);
         favoriteViewHolder viewHolder = new favoriteViewHolder(view);
@@ -54,7 +55,7 @@ public class favoriteAdapter
         viewHolder.judul_acara_fav.setText(fav.judul_fav);
         viewHolder.tanggal_event_fav.setText(fav.event_fav);
         viewHolder.kategori_acara_fav.setText(fav.kategori_fav);
-        viewHolder.ImagePoster_fav.setImageResource(fav.poster_fav.intValue());
+//        viewHolder.ImagePoster_fav.setImageResource(fav.poster_fav.intValue());
 
     }
 

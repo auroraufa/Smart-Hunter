@@ -9,13 +9,21 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.smarthunter.adapter.eventAdapter;
 import com.example.smarthunter.adapter.saveAdapter;
+import com.example.smarthunter.model.MessageLogOut;
 import com.example.smarthunter.model.event;
 import com.example.smarthunter.model.saved;
+import com.example.smarthunter.retrofit.RetrofitClient;
+import com.example.smarthunter.retrofit.eventClient;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Account extends AppCompatActivity {
 
@@ -29,14 +37,6 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-
-        SharedPreferences preferences = getApplicationContext()
-                .getSharedPreferences(
-                        "com.example.smarthunter.PREFRENCES",
-                        Context.MODE_PRIVATE
-                );
-
-        String token = preferences.getString("ACCESS_TOKEN", null);
 
         event_adapt = new eventAdapter();
         event_adapt.setListEvent(getDataEvent());
@@ -91,8 +91,28 @@ public class Account extends AppCompatActivity {
         startActivity(main);
     }
 
-    public void logout(View view) {
-        Intent out= new Intent(Account.this, Login.class);
-        startActivity(out);
+    public void toLogout(View view) {
+//        eventClient EventClient = RetrofitClient.getEventClient();
+//
+//        Call<MessageLogOut> call = EventClient.getOut();
+//        call.enqueue(new Callback<MessageLogOut>() {
+//            @Override
+//            public void onResponse(Call<MessageLogOut> call, Response<MessageLogOut> response) {
+//                MessageLogOut pesan = response.body();
+//                if(pesan != null) {
+//                    Intent in = new Intent(getApplicationContext(), Login.class);
+//                    startActivity(in);
+//                }else {
+//                    Toast.makeText(getApplicationContext(), "Logout Gagal", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<MessageLogOut> call, Throwable t) {
+//                Toast.makeText(getApplicationContext(), "Gagal Mengakses Server", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
     }
+
 }
