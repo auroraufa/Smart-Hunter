@@ -44,11 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
         favorite_adapter = new favoriteAdapter();
 
-        SharedPreferences preferences = getApplicationContext()
-                .getSharedPreferences(
-                        "com.example.smarthunter.PREFRENCES",
-                        Context.MODE_PRIVATE
-                );
+        SharedPreferences preferences = getSharedPreferences(
+                "com.example.smarthunter",
+                MODE_PRIVATE
+        );
 
         String token = preferences.getString("TOKEN", null);
         Integer userId = preferences.getInt("USERID",0);
@@ -64,7 +63,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Test Recycler", Toast.LENGTH_SHORT).show();
                     List<FavoriteItem> favoriteItems = dataFavorite.getFavorite();
                     for(FavoriteItem item:favoriteItems) {
-                        favoriteEvent favEvent = new favoriteEvent(String.valueOf(item.getJenis()),
+                        String jenis;
+                        if(item.getJenis()==1){
+                            jenis = "Seminar";
+                        }else{
+                            jenis = "Webinar";
+                        }
+
+                        favoriteEvent favEvent = new favoriteEvent(jenis,
                                 item.getNama(),
                                 item.getNamaEvent(),
                                 "Event : " +item.getDate(),
