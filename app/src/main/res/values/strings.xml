@@ -3,6 +3,7 @@
 
     <string-array name="dropdown_kategori">
 
+
         <item>Kesehatan</item>
         <item>Pendidikan</item>
         <item>Teknologi</item>
@@ -12,6 +13,13 @@
         <item>Kewirausahaan</item>
         <item>Pengembangan Diri</item>
     </string-array>
+
+    <string-array name="dropdown_Jenis">
+
+        <item>Seminar</item>
+        <item>Webinar</item>
+    </string-array>
+
     <string name="title_activity_maps">MapsActivity</string>
 
     <string name="home">Home</string>

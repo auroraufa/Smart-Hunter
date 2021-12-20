@@ -26,7 +26,6 @@ public class saveAdapter
             super(itemView);
             mysave_nama= itemView.findViewById(R.id.nama_sv);
             mysave_jenis =  itemView.findViewById(R.id.jenis_sv);
-            mysave_detail= itemView.findViewById(R.id.detail_sv);
             mysave_judul = itemView.findViewById(R.id.judul_sv);
             mysave_tanggal = itemView.findViewById(R.id.tanggal_sv);
             mysave_post = itemView.findViewById(R.id.image_saved);
@@ -52,7 +51,6 @@ public class saveAdapter
         saved mysv = listSaved.get(position);
         viewHolder.mysave_nama.setText(mysv.nama_save);
         viewHolder.mysave_jenis.setText(mysv.jenis_save);
-        viewHolder.mysave_detail.setText(mysv.detail_save);
         viewHolder.mysave_judul.setText(mysv.judul_save);
         viewHolder.mysave_tanggal.setText(mysv.tanggal_save);
         viewHolder.mysave_post.setImageResource(mysv.image_save.intValue());
