@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
                     startActivity(mainIntent);
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Gagal Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Username/Password Anda salah, silahkan inputkan kembali", Toast.LENGTH_SHORT).show();
                 }
             }
 
