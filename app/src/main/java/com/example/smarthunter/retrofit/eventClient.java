@@ -26,7 +26,7 @@ public interface eventClient {
     @GET("api/favorite/{id}")
     Call<DataFavorite> getDataFav(@Header("token") String token, @Path("id") Integer id);
 
-    @GET("logout")
+    @POST("logout")
     Call<MessageLogOut> getOut(@Header("token") String token);
 
     @GET("api/myevent/{user_id}/{jenis}")

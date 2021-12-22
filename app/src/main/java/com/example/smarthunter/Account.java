@@ -73,6 +73,7 @@ public class Account extends AppCompatActivity {
                                 "Event : " +item.getDate(),
                                 R.drawable.sem2);
                         list.add(event_account);
+
                     }
                 }
                 else {
@@ -158,6 +159,7 @@ public class Account extends AppCompatActivity {
                 if(pesan != null) {
                     Intent in = new Intent(getApplicationContext(), Login.class);
                     startActivity(in);
+                    Toast.makeText(getApplicationContext(), "Anda berhasil logout", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getApplicationContext(), "Logout Gagal", Toast.LENGTH_SHORT).show();
                 }
