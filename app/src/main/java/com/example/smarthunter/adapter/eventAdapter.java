@@ -35,6 +35,7 @@ public class eventAdapter
     ArrayList<event> listEvent = new ArrayList<>();
     public void setListEvent(ArrayList<event> listEvent) {
         this.listEvent = listEvent;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -52,7 +53,7 @@ public class eventAdapter
         viewHolder.myevent_nama.setText(myev.nama_event);
         viewHolder.myevent_jenis.setText(myev.jenis_event);
         viewHolder.myevent_tanggal.setText(myev.tanggal_event);
-        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
+//        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
 
     }
 

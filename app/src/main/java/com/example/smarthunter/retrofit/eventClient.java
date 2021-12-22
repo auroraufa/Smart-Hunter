@@ -2,6 +2,7 @@ package com.example.smarthunter.retrofit;
 
 import com.example.smarthunter.model.DataFavorite;
 import com.example.smarthunter.model.DataLogin;
+import com.example.smarthunter.model.EventAccount;
 import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.MessageLogOut;
 
@@ -26,7 +27,8 @@ public interface eventClient {
     Call<DataFavorite> getDataFav(@Header("token") String token, @Path("id") Integer id);
 
     @GET("logout")
-    Call<MessageLogOut> getOut(@Header("token") String token, @Header("message") String message);
+    Call<MessageLogOut> getOut(@Header("token") String token);
 
-
+    @GET("api/myevent/{user_id}/{jenis}")
+    Call<EventAccount> getEvent(@Header("token") String token, @Path("user_id") Integer id, @Path("jenis") Integer jenis);
 }

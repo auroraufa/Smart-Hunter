@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 DataFavorite dataFavorite = response.body();
                 ArrayList<favoriteEvent> list = new ArrayList<>();
                 if(dataFavorite != null) {
-                    Toast.makeText(getApplicationContext(), "Test Recycler", Toast.LENGTH_SHORT).show();
                     List<FavoriteItem> favoriteItems = dataFavorite.getFavorite();
                     for(FavoriteItem item:favoriteItems) {
                         String jenis;
