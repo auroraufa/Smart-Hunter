@@ -35,6 +35,7 @@ public class saveAdapter
     ArrayList<saved> listSaved = new ArrayList<>();
     public void setListSaved(ArrayList<saved> listSaved) {
         this.listSaved = listSaved;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -53,7 +54,7 @@ public class saveAdapter
         viewHolder.mysave_jenis.setText(mysv.jenis_save);
         viewHolder.mysave_judul.setText(mysv.judul_save);
         viewHolder.mysave_tanggal.setText(mysv.tanggal_save);
-        viewHolder.mysave_post.setImageResource(mysv.image_save.intValue());
+//        viewHolder.mysave_post.setImageResource(mysv.image_save.intValue());
 
     }
 
