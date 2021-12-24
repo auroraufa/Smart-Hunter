@@ -52,6 +52,7 @@ public class eventAdapter
         event myev = listEvent.get(position);
         viewHolder.myevent_nama.setText(myev.nama_event);
         viewHolder.myevent_jenis.setText(myev.jenis_event);
+        viewHolder.myevent_judul.setText(myev.judul_event);
         viewHolder.myevent_tanggal.setText(myev.tanggal_event);
 //        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
 

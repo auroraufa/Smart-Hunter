@@ -5,6 +5,7 @@ import com.example.smarthunter.model.DataLogin;
 import com.example.smarthunter.model.EventAccount;
 import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.MessageLogOut;
+import com.example.smarthunter.model.RegisterUser;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -31,4 +32,7 @@ public interface eventClient {
 
     @GET("api/myevent/{user_id}/{jenis}")
     Call<EventAccount> getEvent(@Header("token") String token, @Path("user_id") Integer id, @Path("jenis") Integer jenis);
+
+    @POST("register")
+    Call<RegisterUser> addUser(@Field("email") String email, @Field("username") String username, @Field("password") String password);
 }

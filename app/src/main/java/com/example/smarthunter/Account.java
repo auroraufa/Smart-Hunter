@@ -142,7 +142,6 @@ public class Account extends AppCompatActivity {
     }
     public ArrayList<event> getDataEvent() {
         ArrayList<event> list = new ArrayList<>();
-        list.add(new event("Seminar", "Pendidikan", "Pendidikan Di Zaman Sekarang","Event : 7-10-2021", R.drawable.sem1));
         list.add(new event("seminar", "Teknologi", "Pentingnya Teknologi Di Zaman Sekarang","Event : 8-10-2021", R.drawable.sem2));
         list.add(new event("Webinar", "Pendidikan", "Sosialisasi Jaringan Komputer", "Event : 10-10-2021", R.drawable.sem3));
         list.add(new event("Webinar", "Pendidikan", "Menjaga Kesehatan Mata","Event : 1-10-2021", R.drawable.web1));
@@ -152,11 +151,9 @@ public class Account extends AppCompatActivity {
     }
     public ArrayList<saved> getDataSaved() {
         ArrayList<saved> list = new ArrayList<>();
-        list.add(new saved("Seminar", "Pendidikan", "Pendidikan Di Zaman Sekarang","Event : 30-12-2021",R.drawable.sem1));
         list.add(new saved("Seminar", "Pendidikan", "Pentingnya Teknologi Di Era 4.0","Event : 2-10-2021",R.drawable.sem2));
         list.add(new saved("Seminar", "Kesehatan", "Menjaga Kesehatan Dengan Berolahraga","Event : 3-2-2021",R.drawable.sem3));
         list.add(new saved("Seminar", "Technopreneur", "Berbisnis Dengan Modal Kecil","Event : 10-10-2021",R.drawable.web1));
-        list.add(new saved("Seminar", "Pendidikan", "Pendidikan Di Zaman Sekarang","Event : 10-8-2021",R.drawable.sem4));
         return list;
     }
 
