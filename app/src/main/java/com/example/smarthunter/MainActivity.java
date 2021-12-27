@@ -33,7 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.http.Path;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements favoriteAdapter.OnFavoriteViewHolderClick{
     RecyclerView rvfavorite_list;
     favoriteAdapter favorite_adapter;
 
@@ -139,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick() {
 
-
+    }
 }

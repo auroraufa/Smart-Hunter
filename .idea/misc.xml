@@ -16,6 +16,7 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable-v24/ic_event.xml" value="0.2703125" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable-v24/ic_eyes.xml" value="0.2703125" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable/bg_rectangle_edittext.xml" value="0.1707236842105263" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable/ic_a.xml" value="0.2703125" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.2703125" />
@@ -26,6 +27,9 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/font/risque.xml" value="0.284375" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_account.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_notifikasi.xml" value="0.1" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_seminar.xml" value="0.16" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_seminar_upload.xml" value="0.16052631578947368" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_webinar_upload.xml" value="0.1" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_edit.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_favorite.xml" value="0.25271739130434784" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_filter.xml" value="0.16052631578947368" />

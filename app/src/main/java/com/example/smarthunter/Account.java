@@ -28,7 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Account extends AppCompatActivity {
+public class Account extends AppCompatActivity implements  eventAdapter.OnEventViewHolderClick {
 
     RecyclerView rvevent_list;
     eventAdapter event_adapt;
@@ -203,5 +203,12 @@ public class Account extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onClick() {
+        Intent detailseminar_upload = new Intent(this, DetailSeminarUpload.class);
+        startActivity(detailseminar_upload);
+    }
+
 
 }

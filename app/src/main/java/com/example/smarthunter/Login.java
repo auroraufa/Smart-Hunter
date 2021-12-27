@@ -76,13 +76,6 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Gagal Akses server", Toast.LENGTH_SHORT).show();
             }
         });
-//        if (username.equals("admin") && password.equals("12345")) {
-//            Intent homeIntent = new Intent(Login.this, MainActivity.class);
-//            startActivity(homeIntent);
-//            finish();
-//        } else{
-//            Toast.makeText(this, "Password/Username Anda Salah", Toast.LENGTH_SHORT).show();
-//        }
     }
 
 }

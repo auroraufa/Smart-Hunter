@@ -33,6 +33,7 @@ public interface eventClient {
     @GET("api/myevent/{user_id}/{jenis}")
     Call<EventAccount> getEvent(@Header("token") String token, @Path("user_id") Integer id, @Path("jenis") Integer jenis);
 
+    @FormUrlEncoded
     @POST("register")
     Call<RegisterUser> addUser(@Field("email") String email, @Field("username") String username, @Field("password") String password);
 }
