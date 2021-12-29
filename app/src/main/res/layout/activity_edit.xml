@@ -127,17 +127,17 @@
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
-        android:id="@+id/pass2"
+        android:id="@+id/pass3"
         android:layout_width="310dp"
         android:layout_height="63dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="#FFFFFF"
         android:text=" Password Baru"
         android:textColor="#0E0D0D"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass" />
 
@@ -145,7 +145,7 @@
         android:id="@+id/update"
         android:layout_width="312dp"
         android:layout_height="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#050522"
         android:onClick="goupdate"
         android:text="Update"
@@ -153,7 +153,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass2" />
+        app:layout_constraintTop_toBottomOf="@+id/pass3" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputname"
@@ -195,18 +195,18 @@
         tools:text="ginda" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputpassword2"
+        android:id="@+id/inputpassword3"
         android:layout_width="239dp"
         android:layout_height="35dp"
         android:drawableEnd="@drawable/ic_eyes"
         android:inputType="textPassword"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pass2"
-        app:layout_constraintEnd_toEndOf="@+id/pass2"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="@+id/pass2"
-        app:layout_constraintTop_toTopOf="@+id/pass2"
-        app:layout_constraintVertical_bias="0.678"
+        app:layout_constraintBottom_toBottomOf="@+id/pass3"
+        app:layout_constraintEnd_toEndOf="@+id/pass3"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/pass3"
+        app:layout_constraintTop_toTopOf="@+id/pass3"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="ginda" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
