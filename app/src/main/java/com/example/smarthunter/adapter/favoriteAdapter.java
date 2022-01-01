@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class favoriteAdapter
         extends RecyclerView.Adapter<favoriteAdapter.favoriteViewHolder>{
 
-    public class favoriteViewHolder extends RecyclerView.ViewHolder {
+    public class favoriteViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView jenis_event_fav,kategori_acara_fav,judul_acara_fav,tanggal_event_fav;
         ImageView ImagePoster_fav;
@@ -29,8 +29,26 @@ public class favoriteAdapter
             judul_acara_fav = itemView.findViewById(R.id.judul_acara_fav);
             tanggal_event_fav = itemView.findViewById(R.id.tanggal_event_fav);
             ImagePoster_fav = itemView.findViewById(R.id.image_poster_fav);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (listener != null) {
+                listener.onClick();
+            }
         }
     }
+
+    public interface OnFavoriteViewHolderClick{
+        void onClick();
+    }
+
+    public void setListener (OnFavoriteViewHolderClick listener) {
+        this.listener = listener;
+    }
+
+    OnFavoriteViewHolderClick listener = null;
 
     ArrayList<favoriteEvent> listFavorite = new ArrayList<>();
 
