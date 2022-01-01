@@ -33,7 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.http.Path;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements favoriteAdapter.OnFavoriteViewHolderClick{
     RecyclerView rvfavorite_list;
     favoriteAdapter favorite_adapter;
 
@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 DataFavorite dataFavorite = response.body();
                 ArrayList<favoriteEvent> list = new ArrayList<>();
                 if(dataFavorite != null) {
-                    Toast.makeText(getApplicationContext(), "Test Recycler", Toast.LENGTH_SHORT).show();
                     List<FavoriteItem> favoriteItems = dataFavorite.getFavorite();
                     for(FavoriteItem item:favoriteItems) {
                         String jenis;
@@ -140,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick() {
 
-
+    }
 }

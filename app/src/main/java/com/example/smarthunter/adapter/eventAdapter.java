@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class eventAdapter
         extends RecyclerView.Adapter<eventAdapter.eventViewHolder>{
 
-    public class eventViewHolder extends RecyclerView.ViewHolder{
+    public class eventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView myevent_nama,myevent_jenis,myevent_judul,myevent_tanggal;
         ImageView myevent_poster;
@@ -29,12 +29,31 @@ public class eventAdapter
             myevent_judul = itemView.findViewById(R.id.judul_sv);
             myevent_tanggal = itemView.findViewById(R.id.tanggal_sv);
             myevent_poster = itemView.findViewById(R.id.image_saved);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick (View view) {
+            if (listener != null) {
+                listener.onClick();
+            }
         }
     }
+
+    public interface  OnEventViewHolderClick {
+        void onClick();
+    }
+
+    public void setListener (OnEventViewHolderClick listener) {
+        this.listener = listener;
+    }
+
+    OnEventViewHolderClick listener = null;
 
     ArrayList<event> listEvent = new ArrayList<>();
     public void setListEvent(ArrayList<event> listEvent) {
         this.listEvent = listEvent;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -51,8 +70,9 @@ public class eventAdapter
         event myev = listEvent.get(position);
         viewHolder.myevent_nama.setText(myev.nama_event);
         viewHolder.myevent_jenis.setText(myev.jenis_event);
+        viewHolder.myevent_judul.setText(myev.judul_event);
         viewHolder.myevent_tanggal.setText(myev.tanggal_event);
-        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
+//        viewHolder.myevent_poster.setImageResource(myev.image_save.intValue());
 
     }
 

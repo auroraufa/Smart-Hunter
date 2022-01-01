@@ -61,21 +61,21 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:background="#FFC369"
         android:fontFamily="sans-serif-black"
         android:text="Finding Your Dream!!!😍"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@+id/Searching"
         tools:layout_editor_absoluteX="7dp" />
 
     <ImageView
         android:id="@+id/backgroundSeminar"
-        android:layout_width="197dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="172dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1"
@@ -83,8 +83,8 @@
 
     <ImageView
         android:id="@+id/backgrundWebinar"
-        android:layout_width="197dp"
-        android:layout_height="151dp"
+        android:layout_width="200dp"
+        android:layout_height="172dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/textView1"
         app:layout_constraintHorizontal_bias="1.0"
@@ -138,16 +138,16 @@
     <TextView
         android:id="@+id/favorite"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
         android:background="#FFC369"
         android:fontFamily="sans-serif-black"
         android:text="Your Favorite ❤"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/backgrundWebinar"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/backgroundSeminar"
         app:layout_constraintTop_toBottomOf="@+id/backgrundWebinar" />
 
@@ -166,8 +166,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favorite_list"
-        android:layout_width="410dp"
-        android:layout_height="248dp"
+        android:layout_width="411dp"
+        android:layout_height="283dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="1dp"
