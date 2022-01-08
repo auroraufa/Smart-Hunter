@@ -14,10 +14,9 @@ import android.widget.Toast;
 import com.example.smarthunter.adapter.webinarAdapter;
 import com.example.smarthunter.model.EventItem;
 import com.example.smarthunter.model.EventJenisList;
-import com.example.smarthunter.model.seminarEvent;
 import com.example.smarthunter.model.webinarEvent;
 import com.example.smarthunter.retrofit.RetrofitClient;
-import com.example.smarthunter.retrofit.eventClient;
+import com.example.smarthunter.retrofit.EventClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +51,7 @@ public class List_webinar extends AppCompatActivity implements webinarAdapter.On
         SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
         String token = preferences.getString("TOKEN","");
 
-        eventClient eventClient = RetrofitClient.getEventClient();
+        EventClient eventClient = RetrofitClient.getEventClient();
         Call<EventJenisList> call = eventClient.getEventJenis(token, 2);
         call.enqueue(new Callback<EventJenisList>() {
             @Override

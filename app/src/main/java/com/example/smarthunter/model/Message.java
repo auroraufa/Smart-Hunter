@@ -2,7 +2,7 @@ package com.example.smarthunter.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MessageLogOut{
+public class Message {
 
     @SerializedName("message")
     private String message;

@@ -1,9 +1,7 @@
 package com.example.smarthunter;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,14 +11,11 @@ import android.widget.Toast;
 
 import com.example.smarthunter.model.DataLogin;
 import com.example.smarthunter.retrofit.RetrofitClient;
-import com.example.smarthunter.retrofit.eventClient;
+import com.example.smarthunter.retrofit.EventClient;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
 
@@ -45,7 +40,7 @@ public class Login extends AppCompatActivity {
         String username = editUsername.getText().toString();
         String password = editPassword.getText().toString();
 
-        eventClient eventClient = RetrofitClient.getEventClient();
+        EventClient eventClient = RetrofitClient.getEventClient();
 
         Call<DataLogin> call = eventClient.checkLogin(username, password);
 

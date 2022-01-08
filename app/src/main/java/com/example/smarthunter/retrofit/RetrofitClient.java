@@ -7,8 +7,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
+    public String API_BASE_URL = "https://smart-hunter.herokuapp.com/";
+
     @NonNull
-    public static eventClient getEventClient() {
+    public static EventClient getEventClient() {
         //Buat object client retrofit
         String API_BASE_URL = "https://smart-hunter.herokuapp.com/";
 
@@ -20,7 +22,7 @@ public class RetrofitClient {
                 .client(httpClient.build())
                 .build();
 
-        eventClient eventClient = retrofit.create(com.example.smarthunter.retrofit.eventClient.class);
+        EventClient eventClient = retrofit.create(EventClient.class);
         return eventClient;
     }
 }
