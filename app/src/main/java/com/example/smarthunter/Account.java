@@ -16,6 +16,8 @@ import com.example.smarthunter.adapter.saveAdapter;
 import com.example.smarthunter.model.EventAccount;
 import com.example.smarthunter.model.Message;
 import com.example.smarthunter.model.MyeventItem;
+import com.example.smarthunter.model.ShowName;
+import com.example.smarthunter.model.UserItem;
 import com.example.smarthunter.model.event;
 import com.example.smarthunter.model.saved;
 import com.example.smarthunter.retrofit.RetrofitClient;
@@ -52,6 +54,30 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
 
         String token = preferences.getString("TOKEN", null);
         Integer userId = preferences.getInt("USERID",0);
+
+        name = findViewById(R.id.nama_account);
+        Toast.makeText(getApplicationContext(), token, Toast.LENGTH_SHORT).show();
+        Call<ShowName> nameCall = eventClient.getName(token, userId);
+        nameCall.enqueue(new Callback<ShowName>() {
+            @Override
+            public void onResponse(Call<ShowName> call, Response<ShowName> response) {
+                ShowName showName = response.body();
+                if (showName != null) {
+                    List<UserItem> userItem = showName.getUser();
+                    for (UserItem item: userItem) {
+                        name.setText(item.getNama());
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Bfghdhd", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ShowName> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Gagal ke server", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         event_adapt = new eventAdapter();
 
@@ -141,6 +167,7 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
         rvsaved_list.setAdapter(save_adapt);
         GridLayoutManager gridmanage= new GridLayoutManager(this, 2,GridLayoutManager.HORIZONTAL, false);
         rvsaved_list.setLayoutManager(gridmanage);
+
     }
     public ArrayList<event> getDataEvent() {
         ArrayList<event> list = new ArrayList<>();

@@ -8,6 +8,7 @@ import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.KategoriList;
 import com.example.smarthunter.model.Message;
 import com.example.smarthunter.model.RegisterUser;
+import com.example.smarthunter.model.ShowName;
 
 import java.util.List;
 
@@ -57,5 +58,15 @@ public interface EventClient {
                               @Field("kategoris[]") List<Integer> kategoris);
   
     @GET("api/detailEvent/{id}")
-    Call<EventDetail> getDetail(@Header("token") String token, @Path("id") Integer id);
+    Call<EventDetail> getDetail(@Header("token") String token,
+                                @Path("id") Integer id);
+
+    @GET("api/showName/{id}")
+    Call<ShowName> getName(@Header("token") String token,
+                           @Path("id") Integer id);
+
+//    @POST("api/pencarian")
+//    Call<>
+
+
 }

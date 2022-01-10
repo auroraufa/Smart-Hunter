@@ -47,32 +47,29 @@ public class MainActivity extends AppCompatActivity implements favoriteAdapter.O
         String token = preferences.getString("TOKEN", null);
         Integer userId = preferences.getInt("USERID",0);
 
-        searching = findViewById(R.id.Searching);
-        searching.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if((keyEvent.getAction()== KeyEvent.ACTION_DOWN)&&(i == KeyEvent.KEYCODE_ENTER)){
-                    String filter = searching.getText().toString();
-                    Call<EventJenisList> call = eventClient.pencarian(token,filter);
-                    call.enqueue(new Callback<EventJenisList>() {
-                        @Override
-                        public void onResponse(Call<EventJenisList> call, Response<EventJenisList> response) {
-                            EventJenisList eventJenisList = response.body();
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<EventJenisList> call, Throwable t) {
-
-                        }
-                    });
-                }
-                return false;
-            }
-        });
-
-
-
+//        searching = findViewById(R.id.Searching);
+//        searching.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+//                if((keyEvent.getAction()== KeyEvent.ACTION_DOWN)&&(i == KeyEvent.KEYCODE_ENTER)){
+//                    String filter = searching.getText().toString();
+//                    Call<EventJenisList> call = eventClient.pencarian(token,filter);
+//                    call.enqueue(new Callback<EventJenisList>() {
+//                        @Override
+//                        public void onResponse(Call<EventJenisList> call, Response<EventJenisList> response) {
+//                            EventJenisList eventJenisList = response.body();
+//
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<EventJenisList> call, Throwable t) {
+//
+//                        }
+//                    });
+//                }
+//                return false;
+//            }
+//        });
 
         Call<DataFavorite> call = eventClient.getDataFav(token, userId);
         call.enqueue(new Callback<DataFavorite>() {

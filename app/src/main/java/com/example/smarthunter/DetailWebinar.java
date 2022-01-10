@@ -29,7 +29,7 @@ public class DetailWebinar extends AppCompatActivity {
         setContentView(R.layout.activity_detail_webinar);
 
         ImagePoster_pen = findViewById(R.id.ImagePoster_pen);
-        jenis = findViewById(R.id.jenis);
+        jenis = findViewById(R.id.nama_account);
         kategori_event = findViewById(R.id.kategori_event);
         nama_event = findViewById(R.id.nama_event);
         tanggal = findViewById(R.id.tanggal);
@@ -58,7 +58,7 @@ public class DetailWebinar extends AppCompatActivity {
                 if(eventDetail!=null){
                     DetailEvent detailEvent = eventDetail.getDetailEvent();
                     nama_event.setText(detailEvent.getNamaEvent());
-
+                    deskripsi.setText(detailEvent.getDeskripsi());
                 }
             }
 
