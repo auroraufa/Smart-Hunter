@@ -33,8 +33,6 @@ public class DetailWebinar extends AppCompatActivity {
 
         Poster = findViewById(R.id.Poster);
         jenis = findViewById(R.id.jenis);
-        ImagePoster_pen = findViewById(R.id.ImagePoster_pen);
-        jenis = findViewById(R.id.nama_account);
         kategori_event = findViewById(R.id.kategori_event);
         nama_event = findViewById(R.id.nama_event);
         tanggal = findViewById(R.id.tanggal);
