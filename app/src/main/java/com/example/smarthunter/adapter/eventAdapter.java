@@ -25,7 +25,7 @@ public class eventAdapter
         public eventViewHolder(@NonNull View itemView) {
             super(itemView);
             myevent_nama = itemView.findViewById(R.id.nama_sv);
-            myevent_jenis =  itemView.findViewById(R.id.jenis_sv);
+            myevent_jenis =  itemView.findViewById(R.id.kategori_event);
             myevent_judul = itemView.findViewById(R.id.judul_sv);
             myevent_tanggal = itemView.findViewById(R.id.tanggal_sv);
             myevent_poster = itemView.findViewById(R.id.image_saved);
