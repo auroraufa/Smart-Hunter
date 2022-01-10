@@ -55,7 +55,7 @@ public interface EventClient {
     @POST("api/addKategori")
     Call<Message> addKategori(@Header("token") String token,
                               @Field("kategoris[]") List<Integer> kategoris);
-
+  
     @GET("api/detailEvent/{id}")
     Call<EventDetail> getDetail(@Header("token") String token, @Path("id") Integer id);
 }
