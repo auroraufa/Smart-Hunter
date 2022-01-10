@@ -1,4 +1,6 @@
 package com.example.smarthunter;
 
-public class DetailWebinarUpload {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class DetailWebinarUpload extends AppCompatActivity {
 }

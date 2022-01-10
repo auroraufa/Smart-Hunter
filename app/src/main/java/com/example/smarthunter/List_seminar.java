@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import com.example.smarthunter.model.EventItem;
 import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.seminarEvent;
 import com.example.smarthunter.retrofit.RetrofitClient;
-import com.example.smarthunter.retrofit.eventClient;
+import com.example.smarthunter.retrofit.EventClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +51,7 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
         SharedPreferences preferences = getSharedPreferences("com.example.smarthunter",MODE_PRIVATE);
         String token = preferences.getString("TOKEN","");
 
-        eventClient eventClient = RetrofitClient.getEventClient();
+        EventClient eventClient = RetrofitClient.getEventClient();
         Call<EventJenisList> call = eventClient.getEventJenis(token, 1);
         call.enqueue(new Callback<EventJenisList>() {
             @Override

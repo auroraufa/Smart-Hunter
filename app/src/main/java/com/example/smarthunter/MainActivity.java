@@ -1,15 +1,10 @@
 package com.example.smarthunter;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
 import android.content.Intent;
@@ -17,13 +12,10 @@ import android.widget.Toast;
 
 import com.example.smarthunter.adapter.favoriteAdapter;
 import com.example.smarthunter.model.DataFavorite;
-import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.FavoriteItem;
 import com.example.smarthunter.model.favoriteEvent;
 import com.example.smarthunter.retrofit.RetrofitClient;
-import com.example.smarthunter.retrofit.eventClient;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.example.smarthunter.retrofit.EventClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +23,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Path;
 
 public class MainActivity extends AppCompatActivity implements favoriteAdapter.OnFavoriteViewHolderClick{
     RecyclerView rvfavorite_list;
@@ -52,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements favoriteAdapter.O
         String token = preferences.getString("TOKEN", null);
         Integer userId = preferences.getInt("USERID",0);
 
-        eventClient eventClient = RetrofitClient.getEventClient();
+        EventClient eventClient = RetrofitClient.getEventClient();
         Call<DataFavorite> call = eventClient.getDataFav(token, userId);
         call.enqueue(new Callback<DataFavorite>() {
             @Override

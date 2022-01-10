@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,12 +13,12 @@ import android.widget.Toast;
 import com.example.smarthunter.adapter.eventAdapter;
 import com.example.smarthunter.adapter.saveAdapter;
 import com.example.smarthunter.model.EventAccount;
-import com.example.smarthunter.model.MessageLogOut;
+import com.example.smarthunter.model.Message;
 import com.example.smarthunter.model.MyeventItem;
 import com.example.smarthunter.model.event;
 import com.example.smarthunter.model.saved;
 import com.example.smarthunter.retrofit.RetrofitClient;
-import com.example.smarthunter.retrofit.eventClient;
+import com.example.smarthunter.retrofit.EventClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +35,7 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
     RecyclerView rvsaved_list;
     saveAdapter save_adapt;
 
-    eventClient eventClient = RetrofitClient.getEventClient();
+    EventClient eventClient = RetrofitClient.getEventClient();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,13 +179,13 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
 
         String token = preferences.getString("TOKEN", null);
 
-        eventClient EventClient = RetrofitClient.getEventClient();
+        EventClient EventClient = RetrofitClient.getEventClient();
 
-        Call<MessageLogOut> call = EventClient.getOut(token);
-        call.enqueue(new Callback<MessageLogOut>() {
+        Call<Message> call = EventClient.getOut(token);
+        call.enqueue(new Callback<Message>() {
             @Override
-            public void onResponse(Call<MessageLogOut> call, Response<MessageLogOut> response) {
-                MessageLogOut pesan = response.body();
+            public void onResponse(Call<Message> call, Response<Message> response) {
+                Message pesan = response.body();
                 if(pesan != null) {
                     Intent in = new Intent(getApplicationContext(), Login.class);
                     startActivity(in);
@@ -197,7 +196,7 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
             }
 
             @Override
-            public void onFailure(Call<MessageLogOut> call, Throwable t) {
+            public void onFailure(Call<Message> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Gagal Mengakses Server", Toast.LENGTH_SHORT).show();
             }
         });

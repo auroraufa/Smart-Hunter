@@ -32,6 +32,7 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_detail_webinar_upload.xml" value="0.1" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_edit.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_favorite.xml" value="0.25271739130434784" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_favorite_register.xml" value="0.16052631578947368" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_filter.xml" value="0.16052631578947368" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_hasil_pencarian.xml" value="0.16052631578947368" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_list_seminar.xml" value="0.24864130434782608" />
@@ -47,6 +48,7 @@
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/activity_welcome.xml" value="0.25271739130434784" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/item_event.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/item_favorite.xml" value="0.24864130434782608" />
+        <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/item_favorite_register.xml" value="0.4" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/item_saved.xml" value="0.25226449275362317" />
         <entry key="..\:/SmartHunter - Copy/app/src/main/res/layout/test.xml" value="0.264" />
         <entry key="..\:/SmartHunter/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.2703125" />

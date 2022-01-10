@@ -1,5 +1,7 @@
 package com.example.smarthunter;
 
-public class DetailSeminarUpload {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class DetailSeminarUpload extends AppCompatActivity {
 
 }
