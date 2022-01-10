@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smarthunter.adapter.eventAdapter;
@@ -34,6 +35,8 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
 
     RecyclerView rvsaved_list;
     saveAdapter save_adapt;
+
+    TextView name;
 
     EventClient eventClient = RetrofitClient.getEventClient();
 
