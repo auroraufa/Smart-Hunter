@@ -120,7 +120,8 @@ public class List_webinar extends AppCompatActivity implements webinarAdapter.On
 
     @Override
     public void onClick() {
-        Intent listWebinar = new Intent(this,DetailWebinar.class);
-        startActivity(listWebinar);
+        Intent detailWebinar = new Intent(this,DetailWebinar.class);
+        detailWebinar.putExtra("ëventId",1);
+        startActivity(detailWebinar);
     }
 }
