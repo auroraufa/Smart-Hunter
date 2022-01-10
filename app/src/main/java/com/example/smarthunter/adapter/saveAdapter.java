@@ -25,7 +25,7 @@ public class saveAdapter
         public savedViewHolder(@NonNull View itemView){
             super(itemView);
             mysave_nama= itemView.findViewById(R.id.nama_sv);
-            mysave_jenis =  itemView.findViewById(R.id.jenis_sv);
+            mysave_jenis =  itemView.findViewById(R.id.kategori_event);
             mysave_judul = itemView.findViewById(R.id.judul_sv);
             mysave_tanggal = itemView.findViewById(R.id.tanggal_sv);
             mysave_post = itemView.findViewById(R.id.image_saved);

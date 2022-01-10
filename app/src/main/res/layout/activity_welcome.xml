@@ -42,13 +42,13 @@
         android:textAlignment="center"
         android:textColor="#EF5858"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/nama_event"
         app:layout_constraintHorizontal_bias="0.588"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/nama_event"
+        app:layout_constraintTop_toBottomOf="@+id/nama_event" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nama_event"
         android:layout_width="203dp"
         android:layout_height="31dp"
         android:layout_marginTop="12dp"

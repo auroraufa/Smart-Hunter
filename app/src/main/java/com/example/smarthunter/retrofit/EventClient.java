@@ -3,6 +3,7 @@ package com.example.smarthunter.retrofit;
 import com.example.smarthunter.model.DataFavorite;
 import com.example.smarthunter.model.DataLogin;
 import com.example.smarthunter.model.EventAccount;
+import com.example.smarthunter.model.EventDetail;
 import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.KategoriList;
 import com.example.smarthunter.model.Message;
@@ -54,4 +55,7 @@ public interface EventClient {
     @POST("api/addKategori")
     Call<Message> addKategori(@Header("token") String token,
                               @Field("kategoris[]") List<Integer> kategoris);
+
+    @GET("api/detailEvent/{id}")
+    Call<EventDetail> getDetail(@Header("token") String token, @Path("id") Integer id);
 }
