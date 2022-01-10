@@ -2,6 +2,7 @@ package com.example.smarthunter.model;
 
 public class seminarEvent {
 
+    public Integer id;
     public String jenis_sem;
     public String kategori_sem;
     public String judul_sem;
@@ -9,7 +10,8 @@ public class seminarEvent {
     public Integer poster_sem;
     public Object jenis_pen;
 
-    public seminarEvent(String jenis_sem, String kategori_sem, String judul_sem, String event_sem, Integer poster_sem) {
+    public seminarEvent(Integer id,String jenis_sem, String kategori_sem, String judul_sem, String event_sem, Integer poster_sem) {
+        this.id = id;
         this.jenis_sem = jenis_sem;
         this.kategori_sem = kategori_sem;
         this.judul_sem = judul_sem;

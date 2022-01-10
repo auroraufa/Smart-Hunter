@@ -29,7 +29,6 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
 
     RecyclerView rvseminar_list;
     seminarAdapter seminar_adapter;
-
     ImageButton back_listseminar;
 
     @Override
@@ -61,7 +60,7 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
                 if (jenisList != null) {
                     List<EventItem> eventItems = jenisList.getEvent();
                     for (EventItem item:eventItems) {
-                        seminarEvent semEvent = new seminarEvent("Seminar",
+                        seminarEvent semEvent = new seminarEvent(item.getId(),"Seminar",
                                 item.getNama(),
                                 item.getNamaEvent(),
                                 "Event : " + item.getDate(),
@@ -91,16 +90,7 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
 
     }
 
-    public ArrayList<seminarEvent> getDataList_seminar() {
-        ArrayList<seminarEvent> list = new ArrayList<>();
-        list.add(new seminarEvent("seminar", "finansial", "Tantangan dan Peluang perpajakan di Era Revolusi Indutri 4.0", "Event : 2020-01-23", R.drawable.poster_png));
-        list.add(new seminarEvent("seminar", "Enterpreneur", "Social Enterpreneurship", "Event : 2017-06-16", R.drawable.seminar1 ));
-        list.add(new seminarEvent("seminar", "bisnis", "Peluang Bisnis di Era Milenium", "Event : 2017-11-12", R.drawable.seminar2));
-        list.add(new seminarEvent("seminar", "religius", "Islamic youngpreneur in Milenium Era", "Event : 2019-11-15", R.drawable.seminar3 ));
-        list.add(new seminarEvent("seminar", "kesehatan", "Peran Contractor Safety Management System(CSMS) Pada Industri Migas & Konstruksi Untuk Meminimalisir Risiko Kecelakaan Kerja ", "Event : 2020-01-23", R.drawable.seminar4));
 
-        return list;
-    }
     public void posting(View view) {
         Intent posting = new Intent(List_seminar.this, Posting.class);
         startActivity(posting);
@@ -118,7 +108,9 @@ public class List_seminar extends AppCompatActivity implements seminarAdapter.On
 
     @Override
     public void onClick() {
+//        seminarEvent seminarEvent new ;
         Intent detailSeminar = new Intent(this,DetailSeminar.class);
+        detailSeminar.putExtra("ëventId",1);
         startActivity(detailSeminar);
     }
 }

@@ -58,4 +58,9 @@ public interface EventClient {
   
     @GET("api/detailEvent/{id}")
     Call<EventDetail> getDetail(@Header("token") String token, @Path("id") Integer id);
+
+    @FormUrlEncoded
+    @POST("api/pencarian")
+    Call<EventJenisList> pencarian(@Header("token") String token,
+                              @Field("search") String search);
 }

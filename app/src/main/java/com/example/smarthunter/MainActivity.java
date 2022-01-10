@@ -5,13 +5,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.SharedPreferences;
+import android.view.KeyEvent;
 import android.view.View;
 import android.os.Bundle;
 import android.content.Intent;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.smarthunter.adapter.favoriteAdapter;
 import com.example.smarthunter.model.DataFavorite;
+import com.example.smarthunter.model.EventJenisList;
 import com.example.smarthunter.model.FavoriteItem;
 import com.example.smarthunter.model.favoriteEvent;
 import com.example.smarthunter.retrofit.RetrofitClient;
@@ -27,6 +30,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity implements favoriteAdapter.OnFavoriteViewHolderClick{
     RecyclerView rvfavorite_list;
     favoriteAdapter favorite_adapter;
+    EditText searching;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +43,37 @@ public class MainActivity extends AppCompatActivity implements favoriteAdapter.O
                 "com.example.smarthunter",
                 MODE_PRIVATE
         );
-
+        EventClient eventClient = RetrofitClient.getEventClient();
         String token = preferences.getString("TOKEN", null);
         Integer userId = preferences.getInt("USERID",0);
 
-        EventClient eventClient = RetrofitClient.getEventClient();
+        searching = findViewById(R.id.Searching);
+        searching.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if((keyEvent.getAction()== KeyEvent.ACTION_DOWN)&&(i == KeyEvent.KEYCODE_ENTER)){
+                    String filter = searching.getText().toString();
+                    Call<EventJenisList> call = eventClient.pencarian(token,filter);
+                    call.enqueue(new Callback<EventJenisList>() {
+                        @Override
+                        public void onResponse(Call<EventJenisList> call, Response<EventJenisList> response) {
+                            EventJenisList eventJenisList = response.body();
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<EventJenisList> call, Throwable t) {
+
+                        }
+                    });
+                }
+                return false;
+            }
+        });
+
+
+
+
         Call<DataFavorite> call = eventClient.getDataFav(token, userId);
         call.enqueue(new Callback<DataFavorite>() {
             @Override

@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class EventItem{
 
+    @SerializedName("id")
+    private Integer id;
+
     @SerializedName("date")
     private String date;
 
@@ -15,6 +18,10 @@ public class EventItem{
 
     @SerializedName("nama_event")
     private String namaEvent;
+
+    public Integer getId() {
+        return id;
+    }
 
     public String getDate(){
         return date;
