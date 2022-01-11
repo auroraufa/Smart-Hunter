@@ -52,7 +52,7 @@ public class TampilLokasiActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+//         Add a marker in Sydney and move the camera
         mMap.getUiSettings().setZoomControlsEnabled(true);
         LatLng lokasi = new LatLng(latitude, longitude);
         mMap.addMarker(new MarkerOptions().position(lokasi).title("Lokasi Seminar"));

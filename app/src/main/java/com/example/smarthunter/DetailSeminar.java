@@ -35,24 +35,24 @@ import retrofit2.Response;
 
 public class DetailSeminar extends AppCompatActivity {
 
-//    public static final int REQUEST_CODE = 12345;
-//    Button lihatLokasi;
-//    FusedLocationProviderClient fusedLocation;
+    public static final int REQUEST_CODE = 12345;
+    Button lihatLokasi;
+    FusedLocationProviderClient fusedLocation;
 
     ImageView back_detailseminar, Poster;
     Button daftarSeminar;
     TextView jenis,kategori_event,nama_event, tanggal, waktu, tanggal_dl, tiket, harga, penyelenggara, deskripsi, syarat, benefit;
     Integer eventId;
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        if(requestCode == REQUEST_CODE){
-//            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-//                getLastUserLocation();
-//            }
-//        }
-//    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == REQUEST_CODE){
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                getLastUserLocation();
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,24 +113,24 @@ public class DetailSeminar extends AppCompatActivity {
             }
         });
 
-//        lihatLokasi = findViewById(R.id.lihatLokasi);
-//
-//        lihatLokasi.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-//                        && ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                        requestPermissions(new String[]{
-//                                Manifest.permission.ACCESS_COARSE_LOCATION,
-//                                Manifest.permission.ACCESS_FINE_LOCATION
-//                        }, REQUEST_CODE);
-//                    }
-//                } else {
-//                    getLastUserLocation();
-//                }
-//            }
-//        });
+        lihatLokasi = findViewById(R.id.lihatLokasi);
+
+        lihatLokasi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                        && ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        requestPermissions(new String[]{
+                                Manifest.permission.ACCESS_COARSE_LOCATION,
+                                Manifest.permission.ACCESS_FINE_LOCATION
+                        }, REQUEST_CODE);
+                    }
+                } else {
+                    getLastUserLocation();
+                }
+            }
+        });
 
         back_detailseminar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,20 +140,20 @@ public class DetailSeminar extends AppCompatActivity {
         });
     }
 
-//    @SuppressLint("MissingPermission")
-//    private void getLastUserLocation() {
-//        fusedLocation = LocationServices.getFusedLocationProviderClient(this);
-//        fusedLocation.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
-//            @Override
-//            public void onSuccess(Location loc) {
-//                Double latitude = loc.getLatitude();
-//                Double longitude = loc.getLongitude();
-//
-//                Intent mapIntent = new Intent(getApplicationContext(), TampilLokasiActivity.class);
-//                mapIntent.putExtra("LATITIDU", latitude);
-//                mapIntent.putExtra("LONGITUDE", longitude);
-//                startActivity(mapIntent);
-//            }
-//        });
-//    }
+    @SuppressLint("MissingPermission")
+    private void getLastUserLocation() {
+        fusedLocation = LocationServices.getFusedLocationProviderClient(this);
+        fusedLocation.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location loc) {
+                Double latitude = loc.getLatitude();
+                Double longitude = loc.getLongitude();
+
+                Intent mapIntent = new Intent(getApplicationContext(), TampilLokasiActivity.class);
+                mapIntent.putExtra("LATITIDU", latitude);
+                mapIntent.putExtra("LONGITUDE", longitude);
+                startActivity(mapIntent);
+            }
+        });
+    }
 }
