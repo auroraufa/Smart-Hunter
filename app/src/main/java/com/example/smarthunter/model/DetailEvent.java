@@ -1,5 +1,7 @@
 package com.example.smarthunter.model;
 
+import android.net.Uri;
+
 import com.google.gson.annotations.SerializedName;
 
 public class DetailEvent{

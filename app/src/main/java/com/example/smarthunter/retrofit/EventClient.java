@@ -58,8 +58,12 @@ public interface EventClient {
                               @Field("kategoris[]") List<Integer> kategoris);
   
     @GET("api/detailEvent/{id}")
-    Call<EventDetail> getDetail(@Header("token") String token,
-                                @Path("id") Integer id);
+    Call<EventDetail> getDetail(@Header("token") String token, @Path("id") Integer id);
+
+    @POST("api/Pencarian")
+    Call<EventJenisList> pencarian(String token, String filter);
+//    Call<EventDetail> getDetail(@Header("token") String token,
+//                                @Path("id") Integer id);
 
     @GET("api/showName/{id}")
     Call<ShowName> getName(@Header("token") String token,
@@ -76,6 +80,5 @@ public interface EventClient {
 
 //    @POST("api/pencarian")
 //    Call<>
-
 
 }
