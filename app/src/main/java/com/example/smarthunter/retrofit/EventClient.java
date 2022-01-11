@@ -67,6 +67,15 @@ public interface EventClient {
     Call<ShowName> getName(@Header("token") String token,
                            @Path("id") Integer id);
 
+    @FormUrlEncoded
+    @POST("api/EditProfile/{id}")
+    Call<Message> updateProfile(@Header("token") String token,
+                                @Path("id") Integer id,
+                                @Field("nama") String nama,
+                                @Field("email") String email,
+                                @Field("oldPassword") String oldPassword,
+                                @Field("newPassword") String newPassword);
+
 //    @POST("api/pencarian")
 //    Call<>
 

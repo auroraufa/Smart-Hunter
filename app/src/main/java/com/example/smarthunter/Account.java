@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import com.example.smarthunter.model.event;
 import com.example.smarthunter.model.saved;
 import com.example.smarthunter.retrofit.RetrofitClient;
 import com.example.smarthunter.retrofit.EventClient;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,7 @@ public class Account extends AppCompatActivity implements  eventAdapter.OnEventV
     TextView name;
 
     EventClient eventClient = RetrofitClient.getEventClient();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
