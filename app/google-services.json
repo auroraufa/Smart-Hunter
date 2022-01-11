@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984254040939",
+    "project_id": "project-coba-f4dfc",
+    "storage_bucket": "project-coba-f4dfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984254040939:android:870032ebf39f6541d39a2e",
+        "android_client_info": {
+          "package_name": "com.example.smarthunter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984254040939-bc0u6agq3jb0hbk0gpec05m9ejjnshlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtLvxEBE78GB_z4euctsFaR9KRx-ZFem8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984254040939-bc0u6agq3jb0hbk0gpec05m9ejjnshlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

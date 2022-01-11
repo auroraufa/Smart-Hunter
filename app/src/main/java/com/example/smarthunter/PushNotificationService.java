@@ -4,8 +4,8 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-public class PushNotivicationService extends Service {
-    public PushNotivicationService() {
+public class PushNotificationService extends Service {
+    public PushNotificationService() {
     }
 
     @Override
