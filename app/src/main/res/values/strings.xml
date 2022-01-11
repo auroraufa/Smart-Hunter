@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Smart Hunter</string>
+    <string name="channel1">CH1</string>
 
     <string-array name="dropdown_kategori">
+
 
 
         <item>Kesehatan</item>
